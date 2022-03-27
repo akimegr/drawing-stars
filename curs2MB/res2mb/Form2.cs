@@ -2,6 +2,7 @@
 using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Windows.Forms;
+using System.Diagnostics; 
 
 namespace res2mb
 {
@@ -35,6 +36,7 @@ namespace res2mb
         {
             Graphics G = e.Graphics;
             G.SmoothingMode = SmoothingMode.HighQuality;
+            G.Clear(Color.White);
             if (mode)
             {
                 try
@@ -167,6 +169,12 @@ namespace res2mb
             {
                 colorStars.BackColor = colorDialog1.Color;
             }
+        }
+
+        private void variants_Click(object sender, EventArgs e)
+        {
+            //System.Diagnostics.Process.Start(@"c:\Temp\Downloads\some.doc");
+            System.Diagnostics.Process.Start(@"C:\Users\akime\OneDrive\Рабочий стол\4 КУРС МОЙ\varStars.docx");
         }
     }
 }

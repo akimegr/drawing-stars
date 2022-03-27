@@ -113,6 +113,7 @@ namespace res2mb
             this.variants.TabIndex = 4;
             this.variants.Text = "ВАРИАНТЫ ЗВЁЗД";
             this.variants.UseVisualStyleBackColor = true;
+            this.variants.Click += new System.EventHandler(this.variants_Click);
             // 
             // colorStars
             // 
