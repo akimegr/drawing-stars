@@ -205,7 +205,7 @@ namespace res2mb
             this.maxValue.Name = "maxValue";
             this.maxValue.Size = new System.Drawing.Size(120, 23);
             this.maxValue.TabIndex = 11;
-            this.maxValue.Text = "1";
+            this.maxValue.Text = "3";
             this.maxValue.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.maxValue.TextChanged += new System.EventHandler(this.maxValue_TextChanged);
             // 
