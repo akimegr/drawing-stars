@@ -1,12 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.Drawing.Drawing2D;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace res2mb
@@ -46,15 +40,38 @@ namespace res2mb
                 try
                 {
                     float radius = float.Parse(sizeStarsNumber.Text);
-                    float radius2 = (float)(radius/2.5);
-                    
-                
-                PointF[] Star1 = Calculate5StarPoints(new PointF(this.Width / 2, this.Height / 2), radius, radius2);   //(x,y), длина внеешнего, длина внутреннего радиуса (50,20 топ)
-                SolidBrush FillBrush = new SolidBrush(Color.White); //Внутренняя закраска
-                G.FillPolygon(FillBrush, Star1);
-                G.DrawPolygon(new Pen(Color.Purple, 5), Star1); //обводка
+                    float radius2 = (float)(radius / 2.5);
+
+                    if (var1.Checked)
+                    {
+                        PointF[] Star1 = Calculate5StarPoints(new PointF(this.Width / 2, this.Height / 2), radius, radius2);   //(x,y), длина внеешнего, длина внутреннего радиуса (50,20 топ)
+                        SolidBrush FillBrush = new SolidBrush(colorStars.BackColor); //Внутренняя закраска
+                        G.FillPolygon(FillBrush, Star1);
+                        G.DrawPolygon(new Pen(Color.Purple, 5), Star1); //обводка
+                    }
+
+                    if (var2.Checked)
+                    {
+                        PointF[] Star2 = Calculate5StarPoints(new PointF(this.Width / 2, this.Height / 2), radius, radius2);
+                        HatchBrush pat = new HatchBrush(HatchStyle.Cross, Color.RosyBrown, colorStars.BackColor);
+                        G.FillPolygon(pat, Star2);
+                    }
+
+                    if (var3.Checked)
+                    {
+                        PointF[] Star3 = Calculate5StarPoints(new PointF(this.Width / 2, this.Height / 2), radius, radius2);
+                        LinearGradientBrush lin = new LinearGradientBrush(new Point(350, 100), new Point(350, 500), colorStars.BackColor, Color.Cyan);
+                        G.FillPolygon(lin, Star3);
+                    }
+
+                    if (var4.Checked) {
+
+                        PointF[] Star4 = Calculate5StarPoints(new PointF(this.Width / 2, this.Height / 2), radius, radius2);
+                        G.DrawPolygon(new Pen(colorStars.BackColor, 3), Star4);
+                    }
+
                 }
-                catch(Exception ez)
+                catch (Exception ez)
                 {
                     MessageBox.Show("Введите верное значение");
                     pictureBox1.Visible = false;
@@ -72,17 +89,7 @@ namespace res2mb
                 G.Clear(Color.Green);
             }
 
-            //PointF[] Star2 = Calculate5StarPoints(new PointF(200f, 150f), 100f, 20f);
-            //HatchBrush pat = new HatchBrush(HatchStyle.Cross, Color.RosyBrown, Color.IndianRed);
-            //G.FillPolygon(pat, Star2);
 
-            //PointF[] Star3 = Calculate5StarPoints(new PointF(350f, 300f), 200f, 100f);
-            //LinearGradientBrush lin = new LinearGradientBrush(new Point(350, 100), new Point(350, 500),
-            //Color.Salmon, Color.Cyan);
-            //G.FillPolygon(lin, Star3);
-
-            //PointF[] Star4 = Calculate5StarPoints(new PointF(140f, 400f), 120f, 10f);
-            //G.DrawPolygon(new Pen(Color.LightSalmon, 3), Star4);
 
         }
         private PointF[] Calculate5StarPoints(PointF Orig, float outerradius, float innerradius)
@@ -151,7 +158,15 @@ namespace res2mb
                 colorStars.Visible = true;
                 pictureBox1.Visible = false;
             }
-        
+
+        }
+
+        private void colorStars_Click(object sender, EventArgs e)
+        {
+            if(colorDialog1.ShowDialog()!= DialogResult.Cancel)
+            {
+                colorStars.BackColor = colorDialog1.Color;
+            }
         }
     }
 }
