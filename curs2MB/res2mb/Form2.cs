@@ -43,10 +43,29 @@ namespace res2mb
             G.SmoothingMode = SmoothingMode.HighQuality;
             if (mode)
             {
-                PointF[] Star1 = Calculate5StarPoints(new PointF(this.Width / 2, this.Height / 2), 100f, 50f);   //(x,y), длина внеешнего, длина внутреннего радиуса (50,20 топ)
+                try
+                {
+                    float radius = float.Parse(sizeStarsNumber.Text);
+                    float radius2 = (float)(radius/2.5);
+                    
+                
+                PointF[] Star1 = Calculate5StarPoints(new PointF(this.Width / 2, this.Height / 2), radius, radius2);   //(x,y), длина внеешнего, длина внутреннего радиуса (50,20 топ)
                 SolidBrush FillBrush = new SolidBrush(Color.White); //Внутренняя закраска
                 G.FillPolygon(FillBrush, Star1);
                 G.DrawPolygon(new Pen(Color.Purple, 5), Star1); //обводка
+                }
+                catch(Exception ez)
+                {
+                    MessageBox.Show("Введите верное значение");
+                    pictureBox1.Visible = false;
+                    draw.Text = "НАРИСОВАТЬ";
+                    typeStars.Visible = true;
+                    sizeStars.Visible = true;
+                    sizeStarsNumber.Visible = true;
+                    variants.Visible = true;
+                    colorStars.Visible = true;
+                    pictureBox1.Visible = false;
+                }
             }
             else
             {
@@ -64,10 +83,7 @@ namespace res2mb
 
             //PointF[] Star4 = Calculate5StarPoints(new PointF(140f, 400f), 120f, 10f);
             //G.DrawPolygon(new Pen(Color.LightSalmon, 3), Star4);
-            if (!mode)
-            {
-                G.Clear(Color.Black);
-            }
+
         }
         private PointF[] Calculate5StarPoints(PointF Orig, float outerradius, float innerradius)
         {

@@ -138,6 +138,7 @@ namespace res2mb
             // sizeStarsNumber
             // 
             this.sizeStarsNumber.BackColor = System.Drawing.Color.Fuchsia;
+            this.sizeStarsNumber.Font = new System.Drawing.Font("Impact", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.sizeStarsNumber.ForeColor = System.Drawing.SystemColors.Window;
             this.sizeStarsNumber.Location = new System.Drawing.Point(264, 547);
             this.sizeStarsNumber.Multiline = true;
