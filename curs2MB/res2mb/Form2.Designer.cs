@@ -33,13 +33,13 @@ namespace res2mb
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button3 = new System.Windows.Forms.Button();
-            this.groupBox1.SuspendLayout();
+            this.typeStars = new System.Windows.Forms.GroupBox();
+            this.variants = new System.Windows.Forms.Button();
+            this.colorStars = new System.Windows.Forms.Button();
+            this.sizeStars = new System.Windows.Forms.Label();
+            this.sizeStarsNumber = new System.Windows.Forms.TextBox();
+            this.draw = new System.Windows.Forms.Button();
+            this.typeStars.SuspendLayout();
             this.SuspendLayout();
             // 
             // radioButton1
@@ -84,80 +84,80 @@ namespace res2mb
             this.radioButton3.Text = "3 ВАРИАНТ";
             this.radioButton3.UseVisualStyleBackColor = false;
             // 
-            // groupBox1
+            // typeStars
             // 
-            this.groupBox1.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox1.Controls.Add(this.radioButton3);
-            this.groupBox1.Controls.Add(this.radioButton1);
-            this.groupBox1.Controls.Add(this.radioButton2);
-            this.groupBox1.Font = new System.Drawing.Font("Impact", 16F);
-            this.groupBox1.ForeColor = System.Drawing.Color.Fuchsia;
-            this.groupBox1.Location = new System.Drawing.Point(393, 188);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(435, 187);
-            this.groupBox1.TabIndex = 3;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "ВЫБРАТЬ ТИП ЗВЕЗДЫ";
+            this.typeStars.BackColor = System.Drawing.Color.Transparent;
+            this.typeStars.Controls.Add(this.radioButton3);
+            this.typeStars.Controls.Add(this.radioButton1);
+            this.typeStars.Controls.Add(this.radioButton2);
+            this.typeStars.Font = new System.Drawing.Font("Impact", 16F);
+            this.typeStars.ForeColor = System.Drawing.Color.Fuchsia;
+            this.typeStars.Location = new System.Drawing.Point(393, 188);
+            this.typeStars.Name = "typeStars";
+            this.typeStars.Size = new System.Drawing.Size(435, 187);
+            this.typeStars.TabIndex = 3;
+            this.typeStars.TabStop = false;
+            this.typeStars.Text = "ВЫБРАТЬ ТИП ЗВЕЗДЫ";
             // 
-            // button1
+            // variants
             // 
-            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
-            this.button1.Font = new System.Drawing.Font("Impact", 34.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.ForeColor = System.Drawing.Color.LavenderBlush;
-            this.button1.Location = new System.Drawing.Point(44, 114);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(325, 319);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "ВАРИАНТЫ ЗВЁЗД";
-            this.button1.UseVisualStyleBackColor = true;
+            this.variants.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("variants.BackgroundImage")));
+            this.variants.Font = new System.Drawing.Font("Impact", 34.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.variants.ForeColor = System.Drawing.Color.LavenderBlush;
+            this.variants.Location = new System.Drawing.Point(44, 114);
+            this.variants.Name = "variants";
+            this.variants.Size = new System.Drawing.Size(325, 319);
+            this.variants.TabIndex = 4;
+            this.variants.Text = "ВАРИАНТЫ ЗВЁЗД";
+            this.variants.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // colorStars
             // 
-            this.button2.BackColor = System.Drawing.Color.Magenta;
-            this.button2.Font = new System.Drawing.Font("Impact", 34.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button2.Location = new System.Drawing.Point(851, 114);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(325, 319);
-            this.button2.TabIndex = 5;
-            this.button2.Text = "ЦВЕТ ЗВЕЗДЫ";
-            this.button2.UseVisualStyleBackColor = false;
+            this.colorStars.BackColor = System.Drawing.Color.Magenta;
+            this.colorStars.Font = new System.Drawing.Font("Impact", 34.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.colorStars.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.colorStars.Location = new System.Drawing.Point(851, 114);
+            this.colorStars.Name = "colorStars";
+            this.colorStars.Size = new System.Drawing.Size(325, 319);
+            this.colorStars.TabIndex = 5;
+            this.colorStars.Text = "ЦВЕТ ЗВЕЗДЫ";
+            this.colorStars.UseVisualStyleBackColor = false;
             // 
-            // label2
+            // sizeStars
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Impact", 34.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.ForeColor = System.Drawing.Color.Fuchsia;
-            this.label2.Location = new System.Drawing.Point(401, 472);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(427, 72);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "РАЗМЕР ЗВЕЗДЫ";
+            this.sizeStars.AutoSize = true;
+            this.sizeStars.BackColor = System.Drawing.Color.Transparent;
+            this.sizeStars.Font = new System.Drawing.Font("Impact", 34.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.sizeStars.ForeColor = System.Drawing.Color.Fuchsia;
+            this.sizeStars.Location = new System.Drawing.Point(401, 472);
+            this.sizeStars.Name = "sizeStars";
+            this.sizeStars.Size = new System.Drawing.Size(427, 72);
+            this.sizeStars.TabIndex = 7;
+            this.sizeStars.Text = "РАЗМЕР ЗВЕЗДЫ";
             // 
-            // textBox1
+            // sizeStarsNumber
             // 
-            this.textBox1.BackColor = System.Drawing.Color.Fuchsia;
-            this.textBox1.ForeColor = System.Drawing.SystemColors.Window;
-            this.textBox1.Location = new System.Drawing.Point(264, 547);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(681, 82);
-            this.textBox1.TabIndex = 8;
-            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.sizeStarsNumber.BackColor = System.Drawing.Color.Fuchsia;
+            this.sizeStarsNumber.ForeColor = System.Drawing.SystemColors.Window;
+            this.sizeStarsNumber.Location = new System.Drawing.Point(264, 547);
+            this.sizeStarsNumber.Multiline = true;
+            this.sizeStarsNumber.Name = "sizeStarsNumber";
+            this.sizeStarsNumber.Size = new System.Drawing.Size(681, 82);
+            this.sizeStarsNumber.TabIndex = 8;
+            this.sizeStarsNumber.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // button3
+            // draw
             // 
-            this.button3.BackColor = System.Drawing.Color.Orchid;
-            this.button3.Font = new System.Drawing.Font("Impact", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button3.ForeColor = System.Drawing.Color.Lime;
-            this.button3.Location = new System.Drawing.Point(393, 31);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(435, 106);
-            this.button3.TabIndex = 9;
-            this.button3.Text = "НАРИСОВАТЬ";
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.draw.BackColor = System.Drawing.Color.Orchid;
+            this.draw.Font = new System.Drawing.Font("Impact", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.draw.ForeColor = System.Drawing.Color.Lime;
+            this.draw.Location = new System.Drawing.Point(393, 31);
+            this.draw.Name = "draw";
+            this.draw.Size = new System.Drawing.Size(435, 106);
+            this.draw.TabIndex = 9;
+            this.draw.Text = "НАРИСОВАТЬ";
+            this.draw.UseVisualStyleBackColor = false;
+            this.draw.Click += new System.EventHandler(this.button3_Click);
             // 
             // Form2
             // 
@@ -165,17 +165,17 @@ namespace res2mb
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1236, 662);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.draw);
+            this.Controls.Add(this.sizeStarsNumber);
+            this.Controls.Add(this.sizeStars);
+            this.Controls.Add(this.colorStars);
+            this.Controls.Add(this.variants);
+            this.Controls.Add(this.typeStars);
             this.Name = "Form2";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form2_Load);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.typeStars.ResumeLayout(false);
+            this.typeStars.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -186,12 +186,12 @@ namespace res2mb
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.RadioButton radioButton3;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.GroupBox typeStars;
+        private System.Windows.Forms.Button variants;
+        private System.Windows.Forms.Button colorStars;
+        private System.Windows.Forms.Label sizeStars;
+        private System.Windows.Forms.TextBox sizeStarsNumber;
+        private System.Windows.Forms.Button draw;
     }
 }
 

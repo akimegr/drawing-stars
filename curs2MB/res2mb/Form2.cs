@@ -13,6 +13,7 @@ namespace res2mb
 {
     public partial class Form2 : Form
     {
+        bool mode = true;
         public Form2()
         {
             InitializeComponent();
@@ -26,6 +27,24 @@ namespace res2mb
             //this.Name = "DrawingForm";
             //this.Load += new System.EventHandler(this.DrawingForm_Load);
             //this.ResumeLayout(false);
+            if (mode)
+            {
+                draw.Text = "СМЕНИТЬ ЗВЕЗДУ";
+                typeStars.Visible = false;
+                sizeStars.Visible = false;
+                sizeStarsNumber.Visible = false;
+                variants.Visible = false;
+                colorStars.Visible = false;
+            }
+            else
+            {
+                draw.Text = "НАРИСОВАТЬ";
+                typeStars.Visible = true;
+                sizeStars.Visible = true;
+                sizeStarsNumber.Visible = true;
+                variants.Visible = true;
+                colorStars.Visible = true;
+            }
         }
 
         private void Form2_Load(object sender, EventArgs e)
@@ -39,11 +58,11 @@ namespace res2mb
         {
             Graphics G = e.Graphics;
             G.SmoothingMode = SmoothingMode.HighQuality;
-
-            PointF[] Star1 = Calculate5StarPoints(new PointF(100f, 100f), 50f, 20f);
-            SolidBrush FillBrush = new SolidBrush(Color.Pink);
+            
+            PointF[] Star1 = Calculate5StarPoints(new PointF(this.Width/2, this.Height/2), 100f, 50f);   //(x,y), длина внеешнего, длина внутреннего радиуса (50,20 топ)
+            SolidBrush FillBrush = new SolidBrush(Color.White); //Внутренняя закраска
             G.FillPolygon(FillBrush, Star1);
-            G.DrawPolygon(new Pen(Color.Purple, 5), Star1);
+            G.DrawPolygon(new Pen(Color.Purple, 50), Star1);
 
             //PointF[] Star2 = Calculate5StarPoints(new PointF(200f, 150f), 100f, 20f);
             //HatchBrush pat = new HatchBrush(HatchStyle.Cross, Color.RosyBrown, Color.IndianRed);
@@ -90,7 +109,26 @@ namespace res2mb
 
         private void button3_Click(object sender, EventArgs e)
         {
-
+            mode = !mode;
+            if (mode)
+            {
+                draw.Text = "СМЕНИТЬ ЗВЕЗДУ";
+                typeStars.Visible = false;
+                sizeStars.Visible = false;
+                sizeStarsNumber.Visible = false;
+                variants.Visible = false;
+                colorStars.Visible = false;
+            }
+            else
+            {
+                draw.Text = "НАРИСОВАТЬ";
+                typeStars.Visible = true;
+                sizeStars.Visible = true;
+                sizeStarsNumber.Visible = true;
+                variants.Visible = true;
+                colorStars.Visible = true;
+            }
+        
         }
     }
 }
