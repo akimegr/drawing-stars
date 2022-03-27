@@ -14,37 +14,20 @@ namespace res2mb
     public partial class Form2 : Form
     {
         bool mode = true;
+        private PictureBox pictureBox1 = new PictureBox();
         public Form2()
         {
             InitializeComponent();
             //InitializeComponent
             this.Text = "Курсовая Акимов Егор";
             //this.Size = new Size(6000, 600);
-            this.Paint += new PaintEventHandler(MyPainting);
+
             //this.SuspendLayout();
 
             //this.ClientSize = new System.Drawing.Size(1220, 580);
             //this.Name = "DrawingForm";
             //this.Load += new System.EventHandler(this.DrawingForm_Load);
             //this.ResumeLayout(false);
-            if (mode)
-            {
-                draw.Text = "СМЕНИТЬ ЗВЕЗДУ";
-                typeStars.Visible = false;
-                sizeStars.Visible = false;
-                sizeStarsNumber.Visible = false;
-                variants.Visible = false;
-                colorStars.Visible = false;
-            }
-            else
-            {
-                draw.Text = "НАРИСОВАТЬ";
-                typeStars.Visible = true;
-                sizeStars.Visible = true;
-                sizeStarsNumber.Visible = true;
-                variants.Visible = true;
-                colorStars.Visible = true;
-            }
         }
 
         private void Form2_Load(object sender, EventArgs e)
@@ -58,11 +41,17 @@ namespace res2mb
         {
             Graphics G = e.Graphics;
             G.SmoothingMode = SmoothingMode.HighQuality;
-            
-            PointF[] Star1 = Calculate5StarPoints(new PointF(this.Width/2, this.Height/2), 100f, 50f);   //(x,y), длина внеешнего, длина внутреннего радиуса (50,20 топ)
-            SolidBrush FillBrush = new SolidBrush(Color.White); //Внутренняя закраска
-            G.FillPolygon(FillBrush, Star1);
-            G.DrawPolygon(new Pen(Color.Purple, 50), Star1);
+            if (mode)
+            {
+                PointF[] Star1 = Calculate5StarPoints(new PointF(this.Width / 2, this.Height / 2), 100f, 50f);   //(x,y), длина внеешнего, длина внутреннего радиуса (50,20 топ)
+                SolidBrush FillBrush = new SolidBrush(Color.White); //Внутренняя закраска
+                G.FillPolygon(FillBrush, Star1);
+                G.DrawPolygon(new Pen(Color.Purple, 5), Star1); //обводка
+            }
+            else
+            {
+                G.Clear(Color.Green);
+            }
 
             //PointF[] Star2 = Calculate5StarPoints(new PointF(200f, 150f), 100f, 20f);
             //HatchBrush pat = new HatchBrush(HatchStyle.Cross, Color.RosyBrown, Color.IndianRed);
@@ -75,6 +64,10 @@ namespace res2mb
 
             //PointF[] Star4 = Calculate5StarPoints(new PointF(140f, 400f), 120f, 10f);
             //G.DrawPolygon(new Pen(Color.LightSalmon, 3), Star4);
+            if (!mode)
+            {
+                G.Clear(Color.Black);
+            }
         }
         private PointF[] Calculate5StarPoints(PointF Orig, float outerradius, float innerradius)
         {
@@ -118,6 +111,19 @@ namespace res2mb
                 sizeStarsNumber.Visible = false;
                 variants.Visible = false;
                 colorStars.Visible = false;
+                pictureBox1.Dock = DockStyle.Fill;
+                pictureBox1.BackColor = Color.White;
+                // Connect the Paint event of the PictureBox to the event handler method.
+                pictureBox1.Visible = true;
+                pictureBox1.Paint += new PaintEventHandler(MyPainting);
+                this.Controls.Add(pictureBox1);
+                this.SuspendLayout();
+
+                //this.ClientSize = new System.Drawing.Size(1220, 580);
+                //this.Name = "DrawingForm";
+                //this.Load += new System.EventHandler(this.DrawingForm_Load);
+                this.ResumeLayout(false);
+
             }
             else
             {
@@ -127,6 +133,7 @@ namespace res2mb
                 sizeStarsNumber.Visible = true;
                 variants.Visible = true;
                 colorStars.Visible = true;
+                pictureBox1.Visible = false;
             }
         
         }
