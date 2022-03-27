@@ -34,13 +34,15 @@ namespace res2mb
             this.var2 = new System.Windows.Forms.RadioButton();
             this.var3 = new System.Windows.Forms.RadioButton();
             this.typeStars = new System.Windows.Forms.GroupBox();
+            this.var4 = new System.Windows.Forms.RadioButton();
             this.variants = new System.Windows.Forms.Button();
             this.colorStars = new System.Windows.Forms.Button();
             this.sizeStars = new System.Windows.Forms.Label();
             this.sizeStarsNumber = new System.Windows.Forms.TextBox();
             this.draw = new System.Windows.Forms.Button();
-            this.var4 = new System.Windows.Forms.RadioButton();
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
+            this.label1 = new System.Windows.Forms.Label();
+            this.maxValue = new System.Windows.Forms.TextBox();
             this.typeStars.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -101,6 +103,19 @@ namespace res2mb
             this.typeStars.TabIndex = 3;
             this.typeStars.TabStop = false;
             this.typeStars.Text = "ВЫБРАТЬ ТИП ЗВЕЗДЫ";
+            // 
+            // var4
+            // 
+            this.var4.AutoSize = true;
+            this.var4.Font = new System.Drawing.Font("Impact", 17F);
+            this.var4.ForeColor = System.Drawing.Color.Violet;
+            this.var4.Location = new System.Drawing.Point(136, 179);
+            this.var4.Name = "var4";
+            this.var4.Size = new System.Drawing.Size(159, 40);
+            this.var4.TabIndex = 3;
+            this.var4.TabStop = true;
+            this.var4.Text = "4 ВАРИАНТ";
+            this.var4.UseVisualStyleBackColor = true;
             // 
             // variants
             // 
@@ -169,18 +184,30 @@ namespace res2mb
             this.draw.UseVisualStyleBackColor = false;
             this.draw.Click += new System.EventHandler(this.button3_Click);
             // 
-            // var4
+            // label1
             // 
-            this.var4.AutoSize = true;
-            this.var4.Font = new System.Drawing.Font("Impact", 17F);
-            this.var4.ForeColor = System.Drawing.Color.Violet;
-            this.var4.Location = new System.Drawing.Point(136, 179);
-            this.var4.Name = "var4";
-            this.var4.Size = new System.Drawing.Size(159, 40);
-            this.var4.TabIndex = 3;
-            this.var4.TabStop = true;
-            this.var4.Text = "4 ВАРИАНТ";
-            this.var4.UseVisualStyleBackColor = true;
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Impact", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.ForeColor = System.Drawing.Color.Fuchsia;
+            this.label1.Location = new System.Drawing.Point(27, 489);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(123, 18);
+            this.label1.TabIndex = 10;
+            this.label1.Text = "КОЛИЧЕСТВО ЗВЁЗД";
+            // 
+            // maxValue
+            // 
+            this.maxValue.BackColor = System.Drawing.Color.Fuchsia;
+            this.maxValue.Font = new System.Drawing.Font("Impact", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.maxValue.ForeColor = System.Drawing.SystemColors.InactiveBorder;
+            this.maxValue.Location = new System.Drawing.Point(30, 511);
+            this.maxValue.Name = "maxValue";
+            this.maxValue.Size = new System.Drawing.Size(120, 23);
+            this.maxValue.TabIndex = 11;
+            this.maxValue.Text = "1";
+            this.maxValue.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.maxValue.TextChanged += new System.EventHandler(this.maxValue_TextChanged);
             // 
             // Form2
             // 
@@ -188,6 +215,8 @@ namespace res2mb
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1236, 662);
+            this.Controls.Add(this.maxValue);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.draw);
             this.Controls.Add(this.sizeStarsNumber);
             this.Controls.Add(this.sizeStars);
@@ -217,6 +246,8 @@ namespace res2mb
         private System.Windows.Forms.Button draw;
         private System.Windows.Forms.RadioButton var4;
         private System.Windows.Forms.ColorDialog colorDialog1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox maxValue;
     }
 }
 

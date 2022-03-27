@@ -8,8 +8,8 @@ namespace res2mb
 {
     public partial class Form2 : Form
     {
-        bool mode = true;
-        private PictureBox pictureBox1 = new PictureBox();
+        bool mode = false;
+        private PictureBox pictureBox1;
         public Form2()
         {
             InitializeComponent();
@@ -34,56 +34,85 @@ namespace res2mb
 
         private void MyPainting(object sender, PaintEventArgs e)
         {
+
+            int maxValueC = int.Parse(maxValue.Text);
             Graphics G = e.Graphics;
             G.SmoothingMode = SmoothingMode.HighQuality;
             G.Clear(Color.White);
+            bool checkMax = true;
+            if (maxValueC == 1)
+            {
+                checkMax = true;
+            }
+            else
+            {
+                if (int.Parse(sizeStarsNumber.Text) <= 25)
+                {
+                    checkMax = true;
+                }
+                else
+                {
+                    checkMax = false;
+                    MessageBox.Show("При значении больше 1 звезды их величина должна быть меньше 25");
+                }
+                
+
+            }
             if (mode)
             {
-                try
+                int i = 0;
+                while (checkMax && i < maxValueC)
                 {
-                    float radius = float.Parse(sizeStarsNumber.Text);
-                    float radius2 = (float)(radius / 2.5);
-
-                    if (var1.Checked)
+                    try
                     {
-                        PointF[] Star1 = Calculate5StarPoints(new PointF(this.Width / 2, this.Height / 2), radius, radius2);   //(x,y), длина внеешнего, длина внутреннего радиуса (50,20 топ)
-                        SolidBrush FillBrush = new SolidBrush(colorStars.BackColor); //Внутренняя закраска
-                        G.FillPolygon(FillBrush, Star1);
-                        G.DrawPolygon(new Pen(Color.Purple, 5), Star1); //обводка
-                    }
+                        float radius = float.Parse(sizeStarsNumber.Text);
+                        float radius2 = (float)(radius / 2.5);
 
-                    if (var2.Checked)
+                        if (var1.Checked)
+                        {
+                            PointF[] Star1 = Calculate5StarPoints(new PointF(this.Width / 2, this.Height / 2), radius, radius2);   //(x,y), длина внеешнего, длина внутреннего радиуса (50,20 топ)
+                            SolidBrush FillBrush = new SolidBrush(colorStars.BackColor); //Внутренняя закраска
+                            G.FillPolygon(FillBrush, Star1);
+                            G.DrawPolygon(new Pen(Color.Purple, 5), Star1); //обводка
+                        }
+
+                        if (var2.Checked)
+                        {
+                            PointF[] Star2 = Calculate5StarPoints(new PointF(this.Width / 2, this.Height / 2), radius, radius2);
+                            HatchBrush pat = new HatchBrush(HatchStyle.Cross, Color.RosyBrown, colorStars.BackColor);
+                            G.FillPolygon(pat, Star2);
+                        }
+
+                        if (var3.Checked)
+                        {
+                            PointF[] Star3 = Calculate5StarPoints(new PointF(this.Width / 2, this.Height / 2), radius, radius2);
+                            LinearGradientBrush lin = new LinearGradientBrush(new Point(350, 100), new Point(350, 500), colorStars.BackColor, Color.Cyan);
+                            G.FillPolygon(lin, Star3);
+                        }
+
+                        if (var4.Checked)
+                        {
+                            PointF[] Star4 = Calculate5StarPoints(new PointF(this.Width / 2, this.Height / 2), radius, radius2);
+                            G.DrawPolygon(new Pen(colorStars.BackColor, 3), Star4);
+                        }
+
+                    }
+                    catch (Exception ez)
                     {
-                        PointF[] Star2 = Calculate5StarPoints(new PointF(this.Width / 2, this.Height / 2), radius, radius2);
-                        HatchBrush pat = new HatchBrush(HatchStyle.Cross, Color.RosyBrown, colorStars.BackColor);
-                        G.FillPolygon(pat, Star2);
+                        MessageBox.Show("Введите верное значение");
+                        pictureBox1.Visible = false;
+                        draw.Text = "НАРИСОВАТЬ";
+                        typeStars.Visible = true;
+                        sizeStars.Visible = true;
+                        sizeStarsNumber.Visible = true;
+                        variants.Visible = true;
+                        colorStars.Visible = true;
+                        pictureBox1.Visible = false;
+                        label1.Visible = false;
+                        maxValue.Visible = false;
+                        break;
                     }
-
-                    if (var3.Checked)
-                    {
-                        PointF[] Star3 = Calculate5StarPoints(new PointF(this.Width / 2, this.Height / 2), radius, radius2);
-                        LinearGradientBrush lin = new LinearGradientBrush(new Point(350, 100), new Point(350, 500), colorStars.BackColor, Color.Cyan);
-                        G.FillPolygon(lin, Star3);
-                    }
-
-                    if (var4.Checked) {
-
-                        PointF[] Star4 = Calculate5StarPoints(new PointF(this.Width / 2, this.Height / 2), radius, radius2);
-                        G.DrawPolygon(new Pen(colorStars.BackColor, 3), Star4);
-                    }
-
-                }
-                catch (Exception ez)
-                {
-                    MessageBox.Show("Введите верное значение");
-                    pictureBox1.Visible = false;
-                    draw.Text = "НАРИСОВАТЬ";
-                    typeStars.Visible = true;
-                    sizeStars.Visible = true;
-                    sizeStarsNumber.Visible = true;
-                    variants.Visible = true;
-                    colorStars.Visible = true;
-                    pictureBox1.Visible = false;
+                    i++;
                 }
             }
             else
@@ -130,12 +159,15 @@ namespace res2mb
             mode = !mode;
             if (mode)
             {
+                pictureBox1 = new PictureBox();
                 draw.Text = "СМЕНИТЬ ЗВЕЗДУ";
                 typeStars.Visible = false;
                 sizeStars.Visible = false;
                 sizeStarsNumber.Visible = false;
                 variants.Visible = false;
                 colorStars.Visible = false;
+                                        label1.Visible = false;
+                        maxValue.Visible = false;
                 pictureBox1.Dock = DockStyle.Fill;
                 pictureBox1.BackColor = Color.White;
                 // Connect the Paint event of the PictureBox to the event handler method.
@@ -158,7 +190,9 @@ namespace res2mb
                 sizeStarsNumber.Visible = true;
                 variants.Visible = true;
                 colorStars.Visible = true;
-                pictureBox1.Visible = false;
+                label1.Visible = true;
+                maxValue.Visible = true;
+                pictureBox1.Dispose();
             }
 
         }
@@ -175,6 +209,11 @@ namespace res2mb
         {
             //System.Diagnostics.Process.Start(@"c:\Temp\Downloads\some.doc");
             System.Diagnostics.Process.Start(@"C:\Users\akime\OneDrive\Рабочий стол\4 КУРС МОЙ\varStars.docx");
+        }
+
+        private void maxValue_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
