@@ -11,6 +11,8 @@ namespace res2mb
         float radius;
         float radius2;
         private PictureBox pictureBox1;
+        int colW;
+        int colH;
         public Form2()
         {
             InitializeComponent();
@@ -74,23 +76,22 @@ namespace res2mb
             }
             if (mode)
             {
-                float radius = float.Parse(sizeStarsNumber.Text);
-                float radius2 = (float)(radius / 2.5);
+                radius = float.Parse(sizeStarsNumber.Text);
+                radius2 = (float)(radius / 2.5);
                 float widthDraw;
                 float heighDraw;
-                int colW;
-                int colH;
+
 
                 if (maxValueC > 1)
                 {
                     //Random rnd = new Random();
                     //widthDraw = (float)(rnd.NextDouble() * this.Width);
                     //heighDraw = (float)(rnd.NextDouble() * this.Height);
-                    colW = (int)(this.Width / (2.25*radius));
-                    colH = (int)(this.Height / (2.25*radius));
+                    colW = (int)((this.Width-80) / (2*radius));
+                    colH = (int)((this.Height -100)/ (2*radius+30));
                     
-                        heighDraw = (float)(this.Height - 1.25 * radius);
-                        widthDraw = (float)(0 + 1.25*radius);
+                        heighDraw = (float)(this.Height - 1 * radius-45);
+                        widthDraw = (float)(0 + 1*radius+15);
 
                 }
                 else
@@ -205,7 +206,9 @@ namespace res2mb
         {
             try
             {
-                if(Double.Parse(maxValue.Text)>1 && (this.Width / (Double.Parse(sizeStarsNumber.Text) * 2 + 0.25*radius) * (this.Height / (Double.Parse(sizeStarsNumber.Text) * 2 + 0.25*radius)) < Double.Parse(maxValue.Text))){
+                radius = float.Parse(sizeStarsNumber.Text);
+                radius2 = (float)(radius / 2.5);
+                if ((Width - 50) / (2 * radius) * ((Height - 140) / (2 * radius)) < Double.Parse(maxValue.Text)){
                     throw new Exception("Не поместятся");
                 }
                 mode = !mode;
