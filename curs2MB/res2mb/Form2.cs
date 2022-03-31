@@ -84,14 +84,12 @@ namespace res2mb
 
                 if (maxValueC > 1)
                 {
-                    //Random rnd = new Random();
-                    //widthDraw = (float)(rnd.NextDouble() * this.Width);
-                    //heighDraw = (float)(rnd.NextDouble() * this.Height);
-                    colW = (int)((this.Width-80) / (2*radius));
+
+                    colW = (int)((this.Width-40) / (2*radius));
                     colH = (int)((this.Height -100)/ (2*radius+30));
                     
                         heighDraw = (float)(this.Height - 1 * radius-45);
-                        widthDraw = (float)(0 + 1*radius+15);
+                        widthDraw = (float)(0 + 1*radius);
 
                 }
                 else
@@ -208,7 +206,7 @@ namespace res2mb
             {
                 radius = float.Parse(sizeStarsNumber.Text);
                 radius2 = (float)(radius / 2.5);
-                if ((Width - 50) / (2 * radius) * ((Height - 140) / (2 * radius)) < Double.Parse(maxValue.Text)){
+                if ((Width-15) / (2 * radius) * ((Height - 140) / (2 * radius)) < Double.Parse(maxValue.Text)){
                     throw new Exception("Не поместятся");
                 }
                 mode = !mode;
