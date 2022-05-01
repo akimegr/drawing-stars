@@ -104,7 +104,6 @@ namespace res2mb
                 int i = 0;
                 while (checkMax && i < maxValueC)
                 {
-                    
                     try
                     {
 
