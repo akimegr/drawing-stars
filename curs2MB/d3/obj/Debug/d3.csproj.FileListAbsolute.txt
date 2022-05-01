@@ -1,0 +1,8 @@
+C:\Users\akime\OneDrive\Документы\GitHub\drawing-stars\curs2MB\d3\bin\Debug\d3.exe
+C:\Users\akime\OneDrive\Документы\GitHub\drawing-stars\curs2MB\d3\bin\Debug\d3.pdb
+C:\Users\akime\OneDrive\Документы\GitHub\drawing-stars\curs2MB\d3\obj\Debug\d3.csprojAssemblyReference.cache
+C:\Users\akime\OneDrive\Документы\GitHub\drawing-stars\curs2MB\d3\obj\Debug\d3.Properties.Resources.resources
+C:\Users\akime\OneDrive\Документы\GitHub\drawing-stars\curs2MB\d3\obj\Debug\d3.csproj.GenerateResource.cache
+C:\Users\akime\OneDrive\Документы\GitHub\drawing-stars\curs2MB\d3\obj\Debug\d3.csproj.CoreCompileInputs.cache
+C:\Users\akime\OneDrive\Документы\GitHub\drawing-stars\curs2MB\d3\obj\Debug\d3.exe
+C:\Users\akime\OneDrive\Документы\GitHub\drawing-stars\curs2MB\d3\obj\Debug\d3.pdb

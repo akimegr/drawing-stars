@@ -1,0 +1,12 @@
+C:\Users\akime\OneDrive\Документы\GitHub\drawing-stars\curs2MB\d33\obj\Debug\d33.csprojAssemblyReference.cache
+C:\Users\akime\OneDrive\Документы\GitHub\drawing-stars\curs2MB\d33\obj\Debug\d33.csproj.CoreCompileInputs.cache
+C:\Users\akime\OneDrive\Документы\GitHub\drawing-stars\curs2MB\d33\bin\Debug\d33.exe.config
+C:\Users\akime\OneDrive\Документы\GitHub\drawing-stars\curs2MB\d33\bin\Debug\d33.exe
+C:\Users\akime\OneDrive\Документы\GitHub\drawing-stars\curs2MB\d33\bin\Debug\d33.pdb
+C:\Users\akime\OneDrive\Документы\GitHub\drawing-stars\curs2MB\d33\bin\Debug\OpenGL.dll
+C:\Users\akime\OneDrive\Документы\GitHub\drawing-stars\curs2MB\d33\bin\Debug\Tao.FreeGlut.dll
+C:\Users\akime\OneDrive\Документы\GitHub\drawing-stars\curs2MB\d33\bin\Debug\OpenGL.dll.config
+C:\Users\akime\OneDrive\Документы\GitHub\drawing-stars\curs2MB\d33\bin\Debug\Tao.FreeGlut.dll.config
+C:\Users\akime\OneDrive\Документы\GitHub\drawing-stars\curs2MB\d33\obj\Debug\d33.csproj.CopyComplete
+C:\Users\akime\OneDrive\Документы\GitHub\drawing-stars\curs2MB\d33\obj\Debug\d33.exe
+C:\Users\akime\OneDrive\Документы\GitHub\drawing-stars\curs2MB\d33\obj\Debug\d33.pdb

@@ -26,6 +26,8 @@ namespace res2mb
             //this.Name = "DrawingForm";
             //this.Load += new System.EventHandler(this.DrawingForm_Load);
             //this.ResumeLayout(false);
+            //directx
+            //dll
         }
 
         private void Form2_Load(object sender, EventArgs e)
@@ -102,6 +104,7 @@ namespace res2mb
                 int i = 0;
                 while (checkMax && i < maxValueC)
                 {
+                    
                     try
                     {
 
@@ -150,6 +153,7 @@ namespace res2mb
                         sizeStarsNumber.Visible = true;
                         variants.Visible = true;
                         colorStars.Visible = true;
+                        button1.Visible = true;
                         pictureBox1.Visible = false;
                         label1.Visible = false;
                         maxValue.Visible = false;
@@ -219,6 +223,7 @@ namespace res2mb
                     sizeStarsNumber.Visible = false;
                     variants.Visible = false;
                     colorStars.Visible = false;
+                    button1.Visible = false;
                     label1.Visible = false;
                     maxValue.Visible = false;
                     pictureBox1.Dock = DockStyle.Fill;
@@ -244,6 +249,7 @@ namespace res2mb
                     sizeStarsNumber.Visible = true;
                     variants.Visible = true;
                     colorStars.Visible = true;
+                    button1.Visible = true;
                     label1.Visible = true;
                     maxValue.Visible = true;
                     pictureBox1.Dispose();
@@ -273,6 +279,22 @@ namespace res2mb
         private void maxValue_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (double.Parse(sizeStarsNumber.Text) <= 500 || double.Parse(sizeStarsNumber.Text)>=1)
+            {
+                ClassLibrary1.Class1 s = new ClassLibrary1.Class1();
+                s.show(float.Parse(sizeStarsNumber.Text));
+            }
+            else
+            {
+                MessageBox.Show("Макимальный размер 500. Минимальный для Сириуса 115");
+            }
+            
+            
+            
         }
     }
 }

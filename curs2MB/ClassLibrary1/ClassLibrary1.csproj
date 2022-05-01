@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="OpenGL">
+      <HintPath>..\..\..\..\..\..\Downloads\п\opengl4tutorials-master\OpenGLTutorial5\ClassLibrary1\libs\OpenGL.dll</HintPath>
+    </Reference>
+    <Reference Include="Tao.FreeGlut">
+      <HintPath>..\..\..\..\..\..\Downloads\п\opengl4tutorials-master\OpenGLTutorial5\ClassLibrary1\libs\Tao.FreeGlut.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

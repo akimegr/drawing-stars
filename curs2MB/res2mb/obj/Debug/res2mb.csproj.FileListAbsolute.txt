@@ -18,3 +18,10 @@ C:\Users\akime\OneDrive\Документы\GitHub\drawing-stars\curs2MB\res2mb\o
 C:\Users\akime\OneDrive\Документы\GitHub\drawing-stars\curs2MB\res2mb\obj\Debug\res2mb.csproj.CoreCompileInputs.cache
 C:\Users\akime\OneDrive\Документы\GitHub\drawing-stars\curs2MB\res2mb\obj\Debug\res2mb.exe
 C:\Users\akime\OneDrive\Документы\GitHub\drawing-stars\curs2MB\res2mb\obj\Debug\res2mb.pdb
+C:\Users\akime\OneDrive\Документы\GitHub\drawing-stars\curs2MB\res2mb\obj\Debug\res2mb.csproj.CopyComplete
+C:\Users\akime\OneDrive\Документы\GitHub\drawing-stars\curs2MB\res2mb\bin\Debug\ClassLibrary1.dll
+C:\Users\akime\OneDrive\Документы\GitHub\drawing-stars\curs2MB\res2mb\bin\Debug\OpenGL.dll
+C:\Users\akime\OneDrive\Документы\GitHub\drawing-stars\curs2MB\res2mb\bin\Debug\Tao.FreeGlut.dll
+C:\Users\akime\OneDrive\Документы\GitHub\drawing-stars\curs2MB\res2mb\bin\Debug\ClassLibrary1.pdb
+C:\Users\akime\OneDrive\Документы\GitHub\drawing-stars\curs2MB\res2mb\bin\Debug\OpenGL.dll.config
+C:\Users\akime\OneDrive\Документы\GitHub\drawing-stars\curs2MB\res2mb\bin\Debug\Tao.FreeGlut.dll.config

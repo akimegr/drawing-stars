@@ -43,6 +43,7 @@ namespace res2mb
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
             this.label1 = new System.Windows.Forms.Label();
             this.maxValue = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.typeStars.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -168,7 +169,7 @@ namespace res2mb
             this.sizeStarsNumber.Name = "sizeStarsNumber";
             this.sizeStarsNumber.Size = new System.Drawing.Size(681, 82);
             this.sizeStarsNumber.TabIndex = 8;
-            this.sizeStarsNumber.Text = "15";
+            this.sizeStarsNumber.Text = "300";
             this.sizeStarsNumber.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // draw
@@ -205,9 +206,20 @@ namespace res2mb
             this.maxValue.Name = "maxValue";
             this.maxValue.Size = new System.Drawing.Size(120, 23);
             this.maxValue.TabIndex = 11;
-            this.maxValue.Text = "240";
+            this.maxValue.Text = "1";
             this.maxValue.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.maxValue.TextChanged += new System.EventHandler(this.maxValue_TextChanged);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.DeepPink;
+            this.button1.Location = new System.Drawing.Point(1047, 489);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(140, 44);
+            this.button1.TabIndex = 12;
+            this.button1.Text = "СИРИУС";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Form2
             // 
@@ -215,6 +227,7 @@ namespace res2mb
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1236, 662);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.maxValue);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.draw);
@@ -248,6 +261,7 @@ namespace res2mb
         private System.Windows.Forms.ColorDialog colorDialog1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox maxValue;
+        private System.Windows.Forms.Button button1;
     }
 }
 
