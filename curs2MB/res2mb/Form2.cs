@@ -2,6 +2,10 @@
 using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Windows.Forms;
+using MyWord = Microsoft.Office.Interop.Word;
+using Xceed.Words.NET;
+using Xceed.Document.NET;
+using Microsoft.Office.Interop.Word;
 
 namespace res2mb
 {
@@ -13,6 +17,7 @@ namespace res2mb
         private PictureBox pictureBox1;
         int colW;
         int colH;
+        private MyWord._Application wordApplicationForRun;
         public Form2()
         {
             InitializeComponent();
@@ -126,7 +131,7 @@ namespace res2mb
                         if (var3.Checked)
                         {
                             PointF[] Star3 = Calculate5StarPoints(new PointF(widthDraw, heighDraw), radius, radius2);
-                            LinearGradientBrush lin = new LinearGradientBrush(new Point(350, 100), new Point(350, 500), colorStars.BackColor, Color.Cyan);
+                            LinearGradientBrush lin = new LinearGradientBrush(new System.Drawing.Point(350, 100), new System.Drawing.Point(350, 500), colorStars.BackColor, Color.Cyan);
                             G[i].FillPolygon(lin, Star3);
                         }
 
@@ -232,6 +237,23 @@ namespace res2mb
                     int z = 0;
                     pictureBox1.Paint += new PaintEventHandler(MyPainting);
                     this.Controls.Add(pictureBox1);
+
+                    wordApplicationForRun = new MyWord.Application(); // объект чтобы открыть ворд
+                    string name = AppDomain.CurrentDomain.BaseDirectory;
+                    MyWord.Document wordDoc = wordApplicationForRun.Documents.Add();
+                    Range docRange = wordDoc.Range();
+                    docRange.Text = "Курсовая Егор Акимов\n\n\n";
+                    string imageName = name + "res.jpeg";
+                    string namez = AppDomain.CurrentDomain.BaseDirectory + "MyWordDoc2.docx";
+                    Bitmap bmp = new Bitmap(pictureBox1.ClientSize.Width, pictureBox1.ClientSize.Height);
+                    pictureBox1.DrawToBitmap(bmp, pictureBox1.ClientRectangle);
+                    bmp.Save(name + "res.jpeg");
+                    //pictureBox1.Image.Save(name + "MyWordDoc.png");
+                    InlineShape pictureShape = docRange.InlineShapes.AddPicture(imageName);
+
+                    wordDoc.SaveAs2(namez);
+                    wordApplicationForRun.Quit();
+
                     this.SuspendLayout();
 
                     //this.ClientSize = new System.Drawing.Size(1220, 580);

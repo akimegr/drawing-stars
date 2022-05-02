@@ -25,3 +25,5 @@ C:\Users\akime\OneDrive\Документы\GitHub\drawing-stars\curs2MB\res2mb\b
 C:\Users\akime\OneDrive\Документы\GitHub\drawing-stars\curs2MB\res2mb\bin\Debug\ClassLibrary1.pdb
 C:\Users\akime\OneDrive\Документы\GitHub\drawing-stars\curs2MB\res2mb\bin\Debug\OpenGL.dll.config
 C:\Users\akime\OneDrive\Документы\GitHub\drawing-stars\curs2MB\res2mb\bin\Debug\Tao.FreeGlut.dll.config
+C:\Users\akime\OneDrive\Документы\GitHub\drawing-stars\curs2MB\res2mb\bin\Debug\Xceed.Document.NET.dll
+C:\Users\akime\OneDrive\Документы\GitHub\drawing-stars\curs2MB\res2mb\bin\Debug\Xceed.Words.NET.dll
