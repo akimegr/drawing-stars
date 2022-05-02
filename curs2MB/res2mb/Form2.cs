@@ -317,5 +317,13 @@ namespace res2mb
             
             
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            string namez = AppDomain.CurrentDomain.BaseDirectory + "MyWordDoc2.docx";
+
+            System.Diagnostics.Process.Start(namez);
+
+        }
     }
 }
