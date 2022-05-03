@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../helpproject.xsl" ?>
+<topic template="Default" modified="2022-05-03T15:40:40.320+03:00" lasteditedby="akime" version="2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../helpproject.xsd">
+  <title>Пустая звезда</title>
+  <body>
+    <header>
+      <para styleclass="Heading1">Пустая звезда</para>
+    </header>
+    <para styleclass="Normal">В программе присутвует пятиконечная звезда без заливки.</para>
+    <para styleclass="Normal"><image src="clip0003.png" scale="100.00%" styleclass="Image Caption" figurelistinclude="0"></image></para>
+  </body>
+</topic>

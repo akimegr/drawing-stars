@@ -20,7 +20,7 @@ namespace d33
         public static void Main()
         {
             float max = 500;
-            float take = 115;
+            float take = 315;
             float res = take / max;
 
             ;

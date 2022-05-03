@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../helpproject.xsl" ?>
+<topic template="Default" modified="2022-05-03T16:49:22.327+03:00" lasteditedby="akime" version="2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../helpproject.xsd">
+  <title>Формула углов 2d</title>
+  <body>
+    <header>
+      <para styleclass="Heading1">Формула углов 2d</para>
+    </header>
+    <para styleclass="Normal"><text styleclass="" style="font-family:Consolas; font-size:9pt; color:#000000;">Если звёзды все поместятся, то подобно часам мы считаем все углы по формуле:</text></para>
+    <para styleclass="Normal"></para>
+    <para styleclass="Normal"><tab /><text styleclass="" style="font-family:Consolas; font-size:9pt; color:#000000;"> &#160; &#160; pnts[0].Y -= outerradius; </text><text styleclass="" style="font-family:Consolas; font-size:9pt; color:#008000;">// 00</text></para>
+    <para styleclass="Normal"><text styleclass="" style="font-family:Consolas; font-size:9pt; color:#000000;"> &#160; &#160; &#160; &#160; &#160; &#160;pnts[1].X += innerradius * Sin36; pnts[1].Y -= innerradius * Cos36; </text><text styleclass="" style="font-family:Consolas; font-size:9pt; color:#008000;">// 0:06 </text></para>
+    <para styleclass="Normal"><text styleclass="" style="font-family:Consolas; font-size:9pt; color:#000000;"> &#160; &#160; &#160; &#160; &#160; &#160;pnts[2].X += outerradius * Sin72; pnts[2].Y -= outerradius * Cos72; </text><text styleclass="" style="font-family:Consolas; font-size:9pt; color:#008000;">// 0:12 </text></para>
+    <para styleclass="Normal"><text styleclass="" style="font-family:Consolas; font-size:9pt; color:#000000;"> &#160; &#160; &#160; &#160; &#160; &#160;pnts[3].X += innerradius * Sin72; pnts[3].Y += innerradius * Cos72; </text><text styleclass="" style="font-family:Consolas; font-size:9pt; color:#008000;">// 0:18</text></para>
+    <para styleclass="Normal"><text styleclass="" style="font-family:Consolas; font-size:9pt; color:#000000;"> &#160; &#160; &#160; &#160; &#160; &#160;pnts[4].X += outerradius * Sin36; pnts[4].Y += outerradius * Cos36; </text><text styleclass="" style="font-family:Consolas; font-size:9pt; color:#008000;">// 0:24</text></para>
+    <para styleclass="Normal"><text styleclass="" style="font-family:Consolas; font-size:9pt; color:#000000;"> &#160; &#160; &#160; &#160; &#160; &#160;pnts[5].Y += innerradius;</text></para>
+    <para styleclass="Normal"><text styleclass="" style="font-family:Consolas; font-size:9pt; color:#000000;"> &#160; &#160; &#160; &#160; &#160; &#160;pnts[6].X += pnts[6].X - pnts[4].X; pnts[6].Y = pnts[4].Y; </text><text styleclass="" style="font-family:Consolas; font-size:9pt; color:#008000;">// отражаем</text></para>
+    <para styleclass="Normal"><text styleclass="" style="font-family:Consolas; font-size:9pt; color:#000000;"> &#160; &#160; &#160; &#160; &#160; &#160;pnts[7].X += pnts[7].X - pnts[3].X; pnts[7].Y = pnts[3].Y; </text><text styleclass="" style="font-family:Consolas; font-size:9pt; color:#008000;">// отражаем</text></para>
+    <para styleclass="Normal"><text styleclass="" style="font-family:Consolas; font-size:9pt; color:#000000;"> &#160; &#160; &#160; &#160; &#160; &#160;pnts[8].X += pnts[8].X - pnts[2].X; pnts[8].Y = pnts[2].Y; </text><text styleclass="" style="font-family:Consolas; font-size:9pt; color:#008000;">// отражаем</text></para>
+    <para styleclass="Normal"><text styleclass="" style="font-family:Consolas; font-size:9pt; color:#000000;"> &#160; &#160; &#160; &#160; &#160; &#160;pnts[9].X += pnts[9].X - pnts[1].X; pnts[9].Y = pnts[1].Y; </text><text styleclass="" style="font-family:Consolas; font-size:9pt; color:#008000;">// отражаем</text></para>
+  </body>
+</topic>

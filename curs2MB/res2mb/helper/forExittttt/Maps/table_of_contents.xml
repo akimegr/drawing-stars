@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<map xmlns:xsi="http://www.w3.org/2001/XInclude">
+  <topicref type="topic" id="446845308471258" build="ALL" modified="2022-05-03T15:27:49.848Z" icon="0" href="Introduction">
+    <caption translate="true">Введение</caption>
+    <topicref type="topic" id="446848230131116" build="ALL" modified="2022-05-03T15:27:58.200Z" icon="0" href="Welcome-topic">
+      <caption translate="true">Добро пожаловать</caption>
+    </topicref>
+    <topicref type="topic" id="446845558928185" build="ALL" modified="2022-05-03T16:41:35.918Z" icon="0" href="Second-topic">
+      <caption translate="true">О программe</caption>
+    </topicref>
+  </topicref>
+  <topicref type="topic" id="446844694220078" build="ALL" modified="2022-05-03T15:35:45.855Z" icon="0" href="Chapter-2">
+    <caption translate="true">Различные виды звёзд</caption>
+    <topicref type="topic" id="446848252565504" build="ALL" modified="2022-05-03T15:37:20.538Z" icon="0" href="Overview">
+      <caption translate="true">Звезда с заливкой и обводкой</caption>
+    </topicref>
+    <topicref type="topic" id="446846129978245" build="ALL" modified="2022-05-03T15:37:56.609Z" icon="0" href="zkl">
+      <caption translate="true">Звезда в клеточку</caption>
+    </topicref>
+    <topicref type="topic" id="45022998051" build="ALL" modified="2022-05-03T15:39:13.968Z" icon="0" href="zgr">
+      <caption translate="true">Градиентная звезда</caption>
+    </topicref>
+    <topicref type="topic" id="446847757162265" build="ALL" modified="2022-05-03T15:40:06.258Z" icon="0" href="zpu">
+      <caption translate="true">Пустая звезда</caption>
+    </topicref>
+    <topicref type="topic" id="446847094661011" build="ALL" modified="2022-05-03T15:40:45.196Z" icon="0" href="Topic">
+      <caption translate="true">Сириус</caption>
+    </topicref>
+  </topicref>
+  <topicref type="topic" id="446846971544580" build="ALL" modified="2022-05-03T15:43:14.238Z" icon="0" href="-">
+    <caption translate="true">Построение звёзд</caption>
+    <topicref type="topic" id="44683487283994" build="ALL" modified="2022-05-03T15:43:28.207Z" icon="0" href="-2d-">
+      <caption translate="true">Построение 2d звёзд</caption>
+    </topicref>
+    <topicref type="topic" id="446848720304313" build="ALL" modified="2022-05-03T16:03:17.326Z" icon="0" href="-2d-2">
+      <caption translate="true">backend 2d звёзд</caption>
+    </topicref>
+    <topicref type="topic" id="44684361188180" build="ALL" modified="2022-05-03T16:23:57.329Z" icon="0" href="--3d">
+      <caption translate="true">Построение Сириуса 3d</caption>
+    </topicref>
+    <topicref type="topic" id="44682603802484" build="ALL" modified="2022-05-03T16:38:32.453Z" icon="0" href="Backend-3d-">
+      <caption translate="true">backend 3d Сириуса</caption>
+    </topicref>
+  </topicref>
+  <topicref type="topic" id="446848876903806" build="ALL" modified="2022-05-03T16:48:10.020Z" icon="0" href="Topic2">
+    <caption translate="true">Формулы</caption>
+    <topicref type="topic" id="446847356842492" build="ALL" modified="2022-05-03T16:48:24.720Z" icon="0" href="--2d">
+      <caption translate="true">Формула углов 2d</caption>
+    </topicref>
+    <topicref type="topic" id="446848961515431" build="ALL" modified="2022-05-03T16:48:36.759Z" icon="0" href="--3d2">
+      <caption translate="true">Формула углов 3d</caption>
+    </topicref>
+    <topicref type="topic" id="446846960825470" build="ALL" modified="2022-05-03T16:49:00.375Z" icon="0" href="----">
+      <caption translate="true">Формула подсчёта количества вмещаемых звёзд</caption>
+    </topicref>
+  </topicref>
+  <topicref type="topic" id="446845963721252" build="ALL" modified="2022-05-03T16:55:56.063Z" icon="0" href="--">
+    <caption translate="true">О создателе хелпа</caption>
+  </topicref>
+</map>

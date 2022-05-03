@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<map xmlns:xsi="http://www.w3.org/2001/XInclude">
+  <topicref type="topic" id="446845308471258" build="ALL" modified="2022-05-03T15:27:49.848Z" icon="0" href="Introduction">
+    <caption translate="true">Введение</caption>
+    <topicref type="topic" id="446848230131116" build="ALL" modified="2022-05-03T15:27:58.200Z" icon="0" href="Welcome-topic">
+      <caption translate="true">Добро пожаловать</caption>
+    </topicref>
+    <topicref type="topic" id="446845558928185" build="ALL" modified="2022-05-03T15:35:21.439Z" icon="0" href="Second-topic">
+      <caption translate="true">О программу</caption>
+    </topicref>
+  </topicref>
+  <topicref type="topic" id="446844694220078" build="ALL" modified="2022-05-03T15:35:45.855Z" icon="0" href="Chapter-2">
+    <caption translate="true">Различные виды звёзд</caption>
+    <topicref type="topic" id="446848252565504" build="ALL" modified="2022-05-03T15:37:20.538Z" icon="0" href="Overview">
+      <caption translate="true">Звезда с заливкой и обводкой</caption>
+    </topicref>
+    <topicref type="topic" id="446846129978245" build="ALL" modified="2022-05-03T15:37:56.609Z" icon="0" href="zkl">
+      <caption translate="true">Звезда в клеточку</caption>
+    </topicref>
+    <topicref type="topic" id="45022998051" build="ALL" modified="2022-05-03T15:39:13.968Z" icon="0" href="zgr">
+      <caption translate="true">Градиентная звезда</caption>
+    </topicref>
+    <topicref type="topic" id="446847757162265" build="ALL" modified="2022-05-03T15:40:06.258Z" icon="0" href="zpu">
+      <caption translate="true">Пустая звезда</caption>
+    </topicref>
+    <topicref type="topic" id="446847094661011" build="ALL" modified="2022-05-03T15:40:45.196Z" icon="0" href="Topic">
+      <caption translate="true">Сириус</caption>
+    </topicref>
+  </topicref>
+</map>

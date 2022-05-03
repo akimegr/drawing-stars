@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../helpproject.xsl" ?>
+<topic template="Default" modified="2022-05-03T16:54:43.840+03:00" lasteditedby="akime" version="2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../helpproject.xsd">
+  <title>backend 2d звёзд</title>
+  <body>
+    <header>
+      <para styleclass="Heading1">backend 2d звёзд</para>
+    </header>
+    <para styleclass="Normal">1) Высчитываем внутренний радиус звезды (он будет внутренним углом звезды)</para>
+    <para styleclass="Normal"><tab />внутренний радиус = внешний радиус / 2.5</para>
+    <para styleclass="Normal"></para>
+    <para styleclass="Normal"><link displaytype="text" defaultstyle="true" type="topiclink" href="----">2) Высчитываем поместятся ли все звёзды, если равенство будет верно(то звезды не вместятся и выбросит ошибку)</link></para>
+    <para styleclass="Normal"></para>
+    <para styleclass="Normal"><tab /><text styleclass="" style="font-family:Consolas; font-size:9pt; color:#000000;"> (Width - 15) / (2 * radius) * ((Height - 140) / (2 * radius)) &lt; количество</text></para>
+    <para styleclass="Normal"></para>
+    <para styleclass="Normal"><link displaytype="text" defaultstyle="true" type="topiclink" href="--2d" styleclass="" style="font-family:Consolas; font-size:9pt; color:#000000;">3) Если звёзды все поместятся, то подобно часам мы считаем все углы по формуле:</link></para>
+    <para styleclass="Normal"></para>
+    <para styleclass="Normal"><tab /><text styleclass="" style="font-family:Consolas; font-size:9pt; color:#000000;"> &#160; &#160; pnts[0].Y -= outerradius; </text><text styleclass="" style="font-family:Consolas; font-size:9pt; color:#008000;">// 00</text></para>
+    <para styleclass="Normal"><text styleclass="" style="font-family:Consolas; font-size:9pt; color:#000000;"> &#160; &#160; &#160; &#160; &#160; &#160;pnts[1].X += innerradius * Sin36; pnts[1].Y -= innerradius * Cos36; </text><text styleclass="" style="font-family:Consolas; font-size:9pt; color:#008000;">// 0:06 </text></para>
+    <para styleclass="Normal"><text styleclass="" style="font-family:Consolas; font-size:9pt; color:#000000;"> &#160; &#160; &#160; &#160; &#160; &#160;pnts[2].X += outerradius * Sin72; pnts[2].Y -= outerradius * Cos72; </text><text styleclass="" style="font-family:Consolas; font-size:9pt; color:#008000;">// 0:12 </text></para>
+    <para styleclass="Normal"><text styleclass="" style="font-family:Consolas; font-size:9pt; color:#000000;"> &#160; &#160; &#160; &#160; &#160; &#160;pnts[3].X += innerradius * Sin72; pnts[3].Y += innerradius * Cos72; </text><text styleclass="" style="font-family:Consolas; font-size:9pt; color:#008000;">// 0:18</text></para>
+    <para styleclass="Normal"><text styleclass="" style="font-family:Consolas; font-size:9pt; color:#000000;"> &#160; &#160; &#160; &#160; &#160; &#160;pnts[4].X += outerradius * Sin36; pnts[4].Y += outerradius * Cos36; </text><text styleclass="" style="font-family:Consolas; font-size:9pt; color:#008000;">// 0:24</text></para>
+    <para styleclass="Normal"><text styleclass="" style="font-family:Consolas; font-size:9pt; color:#000000;"> &#160; &#160; &#160; &#160; &#160; &#160;pnts[5].Y += innerradius;</text></para>
+    <para styleclass="Normal"><text styleclass="" style="font-family:Consolas; font-size:9pt; color:#000000;"> &#160; &#160; &#160; &#160; &#160; &#160;pnts[6].X += pnts[6].X - pnts[4].X; pnts[6].Y = pnts[4].Y; </text><text styleclass="" style="font-family:Consolas; font-size:9pt; color:#008000;">// отражаем</text></para>
+    <para styleclass="Normal"><text styleclass="" style="font-family:Consolas; font-size:9pt; color:#000000;"> &#160; &#160; &#160; &#160; &#160; &#160;pnts[7].X += pnts[7].X - pnts[3].X; pnts[7].Y = pnts[3].Y; </text><text styleclass="" style="font-family:Consolas; font-size:9pt; color:#008000;">// отражаем</text></para>
+    <para styleclass="Normal"><text styleclass="" style="font-family:Consolas; font-size:9pt; color:#000000;"> &#160; &#160; &#160; &#160; &#160; &#160;pnts[8].X += pnts[8].X - pnts[2].X; pnts[8].Y = pnts[2].Y; </text><text styleclass="" style="font-family:Consolas; font-size:9pt; color:#008000;">// отражаем</text></para>
+    <para styleclass="Normal"><text styleclass="" style="font-family:Consolas; font-size:9pt; color:#000000;"> &#160; &#160; &#160; &#160; &#160; &#160;pnts[9].X += pnts[9].X - pnts[1].X; pnts[9].Y = pnts[1].Y; </text><text styleclass="" style="font-family:Consolas; font-size:9pt; color:#008000;">// отражаем</text></para>
+    <para styleclass="Normal"></para>
+    <para styleclass="Normal"><text styleclass="" style="font-family:Consolas; font-size:9pt; color:#000000;">4) Закрашиваем наш полученый контр </text></para>
+    <para styleclass="Normal"></para>
+    <para styleclass="Normal"><text styleclass="" style="font-family:Consolas; font-size:9pt; color:#000000;"> &#160; &#160; &#160; &#160; &#160; &#160; &#160;SolidBrush FillBrush = </text><text styleclass="" style="font-family:Consolas; font-size:9pt; color:#0000ff;">new</text><text styleclass="" style="font-family:Consolas; font-size:9pt; color:#000000;"> SolidBrush(colorStars.BackColor); </text><text styleclass="" style="font-family:Consolas; font-size:9pt; color:#008000;">//Внутренняя закраска</text></para>
+    <para styleclass="Normal"><text styleclass="" style="font-family:Consolas; font-size:9pt; color:#000000;"> &#160; &#160; &#160; &#160; &#160; &#160; &#160;G[i].FillPolygon(FillBrush, Star1);</text></para>
+    <para styleclass="Normal"><text styleclass="" style="font-family:Consolas; font-size:9pt; color:#000000;"> &#160; &#160; &#160; &#160; &#160; &#160; &#160;G[i].DrawPolygon(</text><text styleclass="" style="font-family:Consolas; font-size:9pt; color:#0000ff;">new</text><text styleclass="" style="font-family:Consolas; font-size:9pt; color:#000000;"> Pen(Color.Purple, 5), Star1); </text><text styleclass="" style="font-family:Consolas; font-size:9pt; color:#008000;">//обводка</text></para>
+    <para styleclass="Normal"></para>
+    <para styleclass="Normal"><text styleclass="" style="font-family:Consolas; font-size:9pt; color:#000000;">5) Проверяем нудно ли перезодить на строку вверх</text></para>
+    <para styleclass="Normal"></para>
+    <para styleclass="Normal"><tab /><text styleclass="" style="font-family:Consolas; font-size:9pt; color:#000000;">i % colW == 0</text></para>
+    <para styleclass="Normal"></para>
+    <para styleclass="Normal"><tab /><text styleclass="" style="font-family:Consolas; font-size:9pt; color:#000000;">5.1) Если нужно переходить:</text></para>
+    <para styleclass="Normal"><tab /><tab /><text styleclass="" style="font-family:Consolas; font-size:9pt; color:#000000;">heighDraw -= (</text><text styleclass="" style="font-family:Consolas; font-size:9pt; color:#0000ff;">float</text><text styleclass="" style="font-family:Consolas; font-size:9pt; color:#000000;">)2.25 * radius;</text></para>
+    <para styleclass="Normal"><text styleclass="" style="font-family:Consolas; font-size:9pt; color:#000000;"> &#160; &#160;</text><tab /><text styleclass="" style="font-family:Consolas; font-size:9pt; color:#000000;"> &#160; &#160; &#160; widthDraw = (</text><text styleclass="" style="font-family:Consolas; font-size:9pt; color:#0000ff;">float</text><text styleclass="" style="font-family:Consolas; font-size:9pt; color:#000000;">)(1.25 * radius);</text><tab /><text styleclass="" style="font-family:Consolas; font-size:9pt; color:#000000;">//смещаем вверх и влевый край</text></para>
+    <para styleclass="Normal"></para>
+    <para styleclass="Normal"><tab /><text styleclass="" style="font-family:Consolas; font-size:9pt; color:#000000;">5.2) Если не нужно:</text></para>
+    <para styleclass="Normal"><tab /><tab /><text styleclass="" style="font-family:Consolas; font-size:9pt; color:#000000;">Смещаем звезду вправо: widthDraw += (</text><text styleclass="" style="font-family:Consolas; font-size:9pt; color:#0000ff;">float</text><text styleclass="" style="font-family:Consolas; font-size:9pt; color:#000000;">)(2 * radius + 0.05*radius);</text></para>
+  </body>
+</topic>

@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../helpproject.xsl" ?>
+<topic template="Default" modified="2022-05-03T16:49:38.328+03:00" lasteditedby="akime" version="2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../helpproject.xsd">
+  <title>Формула подсчёта количества вмещаемых звёзд</title>
+  <body>
+    <header>
+      <para styleclass="Heading1">Формула подсчёта количества вмещаемых звёзд</para>
+    </header>
+    <para styleclass="Normal">Высчитываем поместятся ли все звёзды, если равенство будет верно(то звезды не вместятся и выбросит ошибку)</para>
+    <para styleclass="Normal"></para>
+    <para styleclass="Normal"><tab /><text styleclass="" style="font-family:Consolas; font-size:9pt; color:#000000;"> (Width - 15) / (2 * radius) * ((Height - 140) / (2 * radius)) &lt; количество</text></para>
+  </body>
+</topic>

@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../helpproject.xsl" ?>
+<topic template="Default" modified="2022-05-03T16:35:41.465+03:00" lasteditedby="akime" version="2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../helpproject.xsd">
+  <title>Построение Сириуса 3d</title>
+  <body>
+    <header>
+      <para styleclass="Heading1">Построение Сириуса 3d</para>
+    </header>
+    <para styleclass="Normal"></para>
+    <para styleclass="Normal">1) У пользователя есть возможность посмотреть на звезду Сириус в 3d</para>
+    <para styleclass="Normal"></para>
+    <para styleclass="Normal"><tab /><image src="clip0015.png" scale="100.00%" styleclass="Image Caption" figurelistinclude="0"></image></para>
+    <para styleclass="Normal"></para>
+    <para styleclass="Normal">2) Пользователю нужно выбрать стрелочками сторону, в которую будет крутиться 3d модель.</para>
+    <para styleclass="Normal"></para>
+    <para styleclass="Normal"><tab /><image src="clip0016.png" scale="137.97%" width="197" height="113" styleclass="Image Caption" figurelistinclude="0"></image></para>
+    <para styleclass="Normal"></para>
+    <para styleclass="Normal">3) После чего нужно нажать на СИРИУС</para>
+    <para styleclass="Normal"><tab /></para>
+    <para styleclass="Normal"><tab /><image src="ы.png" scale="100.00%" styleclass="Image Caption" figurelistinclude="0"></image></para>
+    <para styleclass="Normal"></para>
+    <para styleclass="Normal">4) Звезды начёнет движение в выбранную сторону.</para>
+    <para styleclass="Normal"></para>
+    <para styleclass="Normal"><tab /><image src="clip0017.png" scale="100.00%" styleclass="Image Caption" figurelistinclude="0"></image></para>
+    <para styleclass="Normal"></para>
+    <para styleclass="Normal">5) У пользователя есть есть возможность:</para>
+    <para styleclass="Normal"><tab />5.1) Приостановить движение звезды, нажав на pause. Чтобы продолжить, нужно ещё раз нажать на СИРИУС</para>
+    <para styleclass="Normal"></para>
+    <para styleclass="Normal"><tab /><tab /><image src="clip0018.png" scale="128.30%" width="78" height="63" styleclass="Image Caption" figurelistinclude="0"></image></para>
+    <para styleclass="Normal"><tab />5.2) Вовсе остановить программу 3d модель и вернуться к окну установки параметров, нажав на кнопку stop</para>
+    <para styleclass="Normal"><tab /><tab /></para>
+    <para styleclass="Normal"><tab /><tab /><image src="clip0019.png" scale="126.96%" width="86" height="57" styleclass="Image Caption" figurelistinclude="0"></image></para>
+    <para styleclass="Normal"></para>
+    <para styleclass="Normal"></para>
+    <para styleclass="Normal"></para>
+    <para styleclass="Normal"></para>
+  </body>
+</topic>

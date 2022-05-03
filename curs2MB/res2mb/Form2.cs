@@ -6,21 +6,27 @@ using MyWord = Microsoft.Office.Interop.Word;
 using Xceed.Words.NET;
 using Xceed.Document.NET;
 using Microsoft.Office.Interop.Word;
+using System.Threading;
 
 namespace res2mb
 {
     public partial class Form2 : Form
     {
+
         bool mode = false;
         float radius;
         float radius2;
         private PictureBox pictureBox1;
         int colW;
         int colH;
+        Thread tred2;
         private MyWord._Application wordApplicationForRun;
+        ClassLibrary1.Class1 s = new ClassLibrary1.Class1();
+
         public Form2()
         {
             InitializeComponent();
+            tred2 = new Thread(s.show);
             //InitializeComponent
             this.Text = "Курсовая Акимов Егор";
             this.Size = new Size(943, 577);
@@ -71,11 +77,19 @@ namespace res2mb
                     draw.Text = "НАРИСОВАТЬ";
                     typeStars.Visible = true;
                     sizeStars.Visible = true;
+                    groupBox1.Visible = true;
                     sizeStarsNumber.Visible = true;
                     variants.Visible = true;
                     colorStars.Visible = true;
                     label1.Visible = true;
                     maxValue.Visible = true;
+                    button4.Visible = true;
+                    button1.Visible = true;
+                    button3.Visible = true;
+                    h1.Visible = true;
+                    r1.Visible = true;
+                    le1.Visible = true;
+                    l1.Visible = true;
                     pictureBox1.Dispose();
                 }
 
@@ -154,9 +168,17 @@ namespace res2mb
                         draw.Text = "НАРИСОВАТЬ";
                         typeStars.Visible = true;
                         sizeStars.Visible = true;
+                        groupBox1.Visible = true;
                         sizeStarsNumber.Visible = true;
                         variants.Visible = true;
                         colorStars.Visible = true;
+                        button4.Visible = true;
+                        button1.Visible = true;
+                        button3.Visible = true;
+                        h1.Visible = true;
+                        r1.Visible = true;
+                        le1.Visible = true;
+                        l1.Visible = true;
                         button1.Visible = true;
                         pictureBox1.Visible = false;
                         label1.Visible = false;
@@ -210,26 +232,235 @@ namespace res2mb
 
         private void button3_Click(object sender, EventArgs e)
         {
+            //try
+            //{
+            //    radius = float.Parse(sizeStarsNumber.Text);
+            //    radius2 = (float)(radius / 2.5);
+            //    if ((Width-15) / (2 * radius) * ((Height - 140) / (2 * radius)) < Double.Parse(maxValue.Text)){
+            //        throw new Exception("Не поместятся");
+            //    }
+            //    mode = !mode;
+            //    if (mode)
+            //    {
+            //        pictureBox1 = new PictureBox();
+            //        draw.Text = "СМЕНИТЬ ЗВЕЗДУ";
+            //        typeStars.Visible = false;
+            //        sizeStars.Visible = false;
+            //        groupBox1.Visible = false;
+            //        sizeStarsNumber.Visible = false;
+            //        variants.Visible = false;
+            //        colorStars.Visible = false;
+            //        button1.Visible = false;
+            //        label1.Visible = false;
+            //        maxValue.Visible = false;
+            //        button4.Visible = false;
+            //        button1.Visible = false;
+            //        button3.Visible = false;
+            //        h1.Visible = false;
+            //        r1.Visible = false;
+            //        le1.Visible = false;
+            //        l1.Visible = false;
+            //        pictureBox1.Dock = DockStyle.Fill;
+            //        pictureBox1.BackColor = Color.White;
+            //        // Connect the Paint event of the PictureBox to the event handler method.
+            //        pictureBox1.Visible = true;
+            //        int z = 0;
+            //        pictureBox1.Paint += new PaintEventHandler(MyPainting);
+            //        this.Controls.Add(pictureBox1);
+
+            //        wordApplicationForRun = new MyWord.Application(); // объект чтобы открыть ворд
+            //        string name = AppDomain.CurrentDomain.BaseDirectory;
+            //        MyWord.Document wordDoc = wordApplicationForRun.Documents.Add();
+            //        Range docRange = wordDoc.Range();
+            //        docRange.Text = "Курсовая Егор Акимов\n\n\n";
+            //        string imageName = name + "res.jpeg";
+            //        string namez = AppDomain.CurrentDomain.BaseDirectory + "MyWordDoc2.docx";
+            //        Bitmap bmp = new Bitmap(pictureBox1.ClientSize.Width, pictureBox1.ClientSize.Height);
+            //        pictureBox1.DrawToBitmap(bmp, pictureBox1.ClientRectangle);
+            //        bmp.Save(name + "res.jpeg");
+            //        //pictureBox1.Image.Save(name + "MyWordDoc.png");
+            //        InlineShape pictureShape = docRange.InlineShapes.AddPicture(imageName);
+
+            //        wordDoc.SaveAs2(namez);
+            //        wordApplicationForRun.Quit();
+
+            //        this.SuspendLayout();
+
+            //        //this.ClientSize = new System.Drawing.Size(1220, 580);
+            //        //this.Name = "DrawingForm";
+            //        //this.Load += new System.EventHandler(this.DrawingForm_Load);
+            //        this.ResumeLayout(false);
+
+            //    }
+            //    else
+            //    {
+            //        draw.Text = "НАРИСОВАТЬ";
+            //        typeStars.Visible = true;
+            //        sizeStars.Visible = true;
+            //        sizeStarsNumber.Visible = true;
+            //        variants.Visible = true;
+            //        colorStars.Visible = true;
+            //        button1.Visible = true;
+            //        label1.Visible = true;
+            //        maxValue.Visible = true;
+            //        groupBox1.Visible = true;
+            //        button4.Visible = true;
+            //        button1.Visible = true;
+            //        button3.Visible = true;
+            //        h1.Visible = true;
+            //        r1.Visible = true;
+            //        le1.Visible = true;
+            //        l1.Visible = true;
+            //        pictureBox1.Dispose();
+            //    }
+            //}
+            //catch(Exception fe)
+            //{
+            //    MessageBox.Show(fe.Message);
+            //}
+
+        }
+
+        private void colorStars_Click(object sender, EventArgs e)
+        {
+            if (colorDialog1.ShowDialog() != DialogResult.Cancel)
+            {
+                colorStars.BackColor = colorDialog1.Color;
+            }
+        }
+
+        private void variants_Click(object sender, EventArgs e)
+        {
+            //System.Diagnostics.Process.Start(@"c:\Temp\Downloads\some.doc");
+            System.Diagnostics.Process.Start(@"C:\Users\akime\OneDrive\Рабочий стол\4 КУРС МОЙ\varStars.docx");
+        }
+
+        private void maxValue_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (tred2.IsAlive)
+            { 
+                tred2.Resume();
+                button1.Enabled = false;
+                button3.Enabled = true;
+                button4.Enabled = true;
+            }
+
+            else
+            {
+                if (double.Parse(sizeStarsNumber.Text) <= 500 && double.Parse(sizeStarsNumber.Text) >= 115)
+                {
+                    float direction = 0f;
+                    if (r1.Checked)
+                    {
+                        direction = 0f;
+                    }
+                    if (l1.Checked)
+                    {
+                        direction = -360f;
+                    }
+                    if (h1.Checked)
+                    {
+                        direction = 360f;
+                    }
+                    if (le1.Checked)
+                    {
+                        direction = -0f;
+                    }
+
+                    button1.Enabled = false;
+                    button3.Enabled = true;
+                    button4.Enabled = true;
+                    ClassLibrary1.Class1 s = new ClassLibrary1.Class1();
+                    string forThred = sizeStarsNumber.Text + "|" + direction;
+                    tred2 = new Thread(s.show);
+                    tred2.Start(forThred);
+                    //s.show(float.Parse(sizeStarsNumber.Text));
+                }
+                else
+                {
+                    MessageBox.Show("Макимальный размер 500. Минимальный для Сириуса 115");
+                }
+            }
+            
+            
+            
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            string namez = AppDomain.CurrentDomain.BaseDirectory + "MyWordDoc2.docx";
+
+            System.Diagnostics.Process.Start(namez);
+
+        }
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+            tred2.Suspend(); //остановит, если остановит то ничего
+            button1.Enabled = true;
+            button3.Enabled = false;
+            button4.Enabled = false;
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            tred2.Abort();//вызовет ошибку которая остановит поток
+            button3.Enabled = false;
+            button1.Enabled = true;
+            button3.Enabled = false;
+        }
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Программа Егора Акимова. Рисование звёзд. \n \tСейчас " + DateTime.Now);
+        }
+
+        private void drawToolStripMenuItem_Click(object sender, EventArgs e)
+        {
             try
             {
                 radius = float.Parse(sizeStarsNumber.Text);
                 radius2 = (float)(radius / 2.5);
-                if ((Width-15) / (2 * radius) * ((Height - 140) / (2 * radius)) < Double.Parse(maxValue.Text)){
+                if ((Width - 15) / (2 * radius) * ((Height - 140) / (2 * radius)) < Double.Parse(maxValue.Text))
+                {
                     throw new Exception("Не поместятся");
                 }
                 mode = !mode;
                 if (mode)
                 {
                     pictureBox1 = new PictureBox();
-                    draw.Text = "СМЕНИТЬ ЗВЕЗДУ";
+                    drawToolStripMenuItem.Text = "СМЕНИТЬ ЗВЕЗДУ";
                     typeStars.Visible = false;
                     sizeStars.Visible = false;
+                    groupBox1.Visible = false;
                     sizeStarsNumber.Visible = false;
                     variants.Visible = false;
                     colorStars.Visible = false;
                     button1.Visible = false;
                     label1.Visible = false;
                     maxValue.Visible = false;
+                    button4.Visible = false;
+                    button1.Visible = false;
+                    button3.Visible = false;
+                    h1.Visible = false;
+                    r1.Visible = false;
+                    le1.Visible = false;
+                    l1.Visible = false;
                     pictureBox1.Dock = DockStyle.Fill;
                     pictureBox1.BackColor = Color.White;
                     // Connect the Paint event of the PictureBox to the event handler method.
@@ -264,7 +495,7 @@ namespace res2mb
                 }
                 else
                 {
-                    draw.Text = "НАРИСОВАТЬ";
+                    drawToolStripMenuItem.Text = "НАРИСОВАТЬ";
                     typeStars.Visible = true;
                     sizeStars.Visible = true;
                     sizeStarsNumber.Visible = true;
@@ -273,57 +504,156 @@ namespace res2mb
                     button1.Visible = true;
                     label1.Visible = true;
                     maxValue.Visible = true;
+                    groupBox1.Visible = true;
+                    button4.Visible = true;
+                    button1.Visible = true;
+                    button3.Visible = true;
+                    h1.Visible = true;
+                    r1.Visible = true;
+                    le1.Visible = true;
+                    l1.Visible = true;
                     pictureBox1.Dispose();
                 }
             }
-            catch(Exception fe)
+            catch (Exception fe)
             {
                 MessageBox.Show(fe.Message);
             }
-
         }
 
-        private void colorStars_Click(object sender, EventArgs e)
-        {
-            if (colorDialog1.ShowDialog() != DialogResult.Cancel)
-            {
-                colorStars.BackColor = colorDialog1.Color;
-            }
-        }
-
-        private void variants_Click(object sender, EventArgs e)
-        {
-            //System.Diagnostics.Process.Start(@"c:\Temp\Downloads\some.doc");
-            System.Diagnostics.Process.Start(@"C:\Users\akime\OneDrive\Рабочий стол\4 КУРС МОЙ\varStars.docx");
-        }
-
-        private void maxValue_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            if (double.Parse(sizeStarsNumber.Text) <= 500 || double.Parse(sizeStarsNumber.Text)>=1)
-            {
-                ClassLibrary1.Class1 s = new ClassLibrary1.Class1();
-                s.show(float.Parse(sizeStarsNumber.Text));
-            }
-            else
-            {
-                MessageBox.Show("Макимальный размер 500. Минимальный для Сириуса 115");
-            }
-            
-            
-            
-        }
-
-        private void button2_Click(object sender, EventArgs e)
+        private void wordToolStripMenuItem_Click(object sender, EventArgs e)
         {
             string namez = AppDomain.CurrentDomain.BaseDirectory + "MyWordDoc2.docx";
 
             System.Diagnostics.Process.Start(namez);
+        }
 
+        private void button8_Click(object sender, EventArgs e)
+        {
+            r1.Checked = true;
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            h1.Checked = true;
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            le1.Checked = true;
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            l1.Checked = true;
+        }
+
+        private void aboutToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Программа Егора Акимова. Рисование звёзд. \n \tСейчас " + DateTime.Now);
+
+        }
+
+        private void toolStripSplitButton3_ButtonClick(object sender, EventArgs e)
+        {
+            MessageBox.Show("Программа Егора Акимова. Рисование звёзд. \n \tСейчас " + DateTime.Now);
+        }
+
+        private void toolStripSplitButton2_ButtonClick(object sender, EventArgs e)
+        {
+            try
+            {
+                radius = float.Parse(sizeStarsNumber.Text);
+                radius2 = (float)(radius / 2.5);
+                if ((Width - 15) / (2 * radius) * ((Height - 140) / (2 * radius)) < Double.Parse(maxValue.Text))
+                {
+                    throw new Exception("Не поместятся");
+                }
+                mode = !mode;
+                if (mode)
+                {
+                    pictureBox1 = new PictureBox();
+                    drawToolStripMenuItem.Text = "СМЕНИТЬ ЗВЕЗДУ";
+                    typeStars.Visible = false;
+                    sizeStars.Visible = false;
+                    groupBox1.Visible = false;
+                    sizeStarsNumber.Visible = false;
+                    variants.Visible = false;
+                    colorStars.Visible = false;
+                    button1.Visible = false;
+                    label1.Visible = false;
+                    maxValue.Visible = false;
+                    button4.Visible = false;
+                    button1.Visible = false;
+                    button3.Visible = false;
+                    h1.Visible = false;
+                    r1.Visible = false;
+                    le1.Visible = false;
+                    l1.Visible = false;
+                    pictureBox1.Dock = DockStyle.Fill;
+                    pictureBox1.BackColor = Color.White;
+                    // Connect the Paint event of the PictureBox to the event handler method.
+                    pictureBox1.Visible = true;
+                    int z = 0;
+                    pictureBox1.Paint += new PaintEventHandler(MyPainting);
+                    this.Controls.Add(pictureBox1);
+
+                    wordApplicationForRun = new MyWord.Application(); // объект чтобы открыть ворд
+                    string name = AppDomain.CurrentDomain.BaseDirectory;
+                    MyWord.Document wordDoc = wordApplicationForRun.Documents.Add();
+                    Range docRange = wordDoc.Range();
+                    docRange.Text = "Курсовая Егор Акимов\n\n\n";
+                    string imageName = name + "res.jpeg";
+                    string namez = AppDomain.CurrentDomain.BaseDirectory + "MyWordDoc2.docx";
+                    Bitmap bmp = new Bitmap(pictureBox1.ClientSize.Width, pictureBox1.ClientSize.Height);
+                    pictureBox1.DrawToBitmap(bmp, pictureBox1.ClientRectangle);
+                    bmp.Save(name + "res.jpeg");
+                    //pictureBox1.Image.Save(name + "MyWordDoc.png");
+                    InlineShape pictureShape = docRange.InlineShapes.AddPicture(imageName);
+
+                    wordDoc.SaveAs2(namez);
+                    wordApplicationForRun.Quit();
+
+                    this.SuspendLayout();
+
+                    //this.ClientSize = new System.Drawing.Size(1220, 580);
+                    //this.Name = "DrawingForm";
+                    //this.Load += new System.EventHandler(this.DrawingForm_Load);
+                    this.ResumeLayout(false);
+
+                }
+                else
+                {
+                    drawToolStripMenuItem.Text = "НАРИСОВАТЬ";
+                    typeStars.Visible = true;
+                    sizeStars.Visible = true;
+                    sizeStarsNumber.Visible = true;
+                    variants.Visible = true;
+                    colorStars.Visible = true;
+                    button1.Visible = true;
+                    label1.Visible = true;
+                    maxValue.Visible = true;
+                    groupBox1.Visible = true;
+                    button4.Visible = true;
+                    button1.Visible = true;
+                    button3.Visible = true;
+                    h1.Visible = true;
+                    r1.Visible = true;
+                    le1.Visible = true;
+                    l1.Visible = true;
+                    pictureBox1.Dispose();
+                }
+            }
+            catch (Exception fe)
+            {
+                MessageBox.Show(fe.Message);
+            }
+        }
+
+        private void helperToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            //Help.ShowHelp(this, @"C:\Users\akime\OneDrive\Рабочий стол\4 КУРС МОЙ\РПВС ЛАБЫ\lab8\WindowsFormsApp1 — копия\WindowsFormsApp1\helph\NewProject.chm");
+            Help.ShowHelp(this, @"C:\Users\akime\OneDrive\Документы\GitHub\drawing-stars\curs2MB\res2mb\helper\MMyNewNewProject.chm");
         }
     }
 }

@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../helpproject.xsl" ?>
+<topic template="Default" modified="2022-05-03T16:53:58.805+03:00" lasteditedby="akime" version="2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../helpproject.xsd">
+  <title>Построение 2d звёзд</title>
+  <body>
+    <header>
+      <para styleclass="Heading1">Построение 2d звёзд</para>
+    </header>
+    <para styleclass="Normal">Для построение звёзд использовалась следующие действия:</para>
+    <para styleclass="Normal"></para>
+    <para styleclass="Normal">1) У пользователя спрашивается размер желаемой звезды (внешний радиус):</para>
+    <para styleclass="Normal"></para>
+    <para styleclass="Normal"><image src="clip0005.png" scale="100.00%" styleclass="Image Caption" figurelistinclude="0"></image></para>
+    <para styleclass="Normal"></para>
+    <para styleclass="Normal"></para>
+    <para styleclass="Normal">2) После чего на стороне программы высчитывается внутренний радиус по<link displaytype="text" defaultstyle="true" type="topiclink" href="-2d-2"> формулe:</link></para>
+    <para styleclass="Normal">&#32;<tab />Внутренний радиус = Внешний радиус / 2.5</para>
+    <para styleclass="Normal"></para>
+    <para styleclass="Normal">3) Пользователь выбирает вариант звезды.</para>
+    <para styleclass="Normal"><tab />3.1) &#160;Пользователь нажимает на кнопку, чтобы посмотреть доступные 2d звёзды</para>
+    <para styleclass="Normal"><tab /><tab /></para>
+    <para styleclass="Normal"><tab /><tab /><image src="clip0006.png" scale="100.00%" styleclass="Image Caption" figurelistinclude="0"></image></para>
+    <para styleclass="Normal"></para>
+    <para styleclass="Normal"></para>
+    <para styleclass="Normal"><tab />3.2) Пользователь, посмотрев варианты звёзд, выбирает понравившийся вариант:</para>
+    <para styleclass="Normal"></para>
+    <para styleclass="Normal"><tab /><tab /><image src="clip0007.png" scale="100.00%" styleclass="Image Caption" figurelistinclude="0"></image></para>
+    <para styleclass="Normal"></para>
+    <para styleclass="Normal"><tab />3.3) Допольнитальная возможность: выбрать цвет звезды для своей звезды (выбраный цвет будет доминировать над другими (зависит от варианта звезды))</para>
+    <para styleclass="Normal"><tab /><tab /></para>
+    <para styleclass="Normal"><tab /><tab /><image src="clip0008.png" scale="100.00%" styleclass="Image Caption" figurelistinclude="0"></image></para>
+    <para styleclass="Normal"></para>
+    <para styleclass="Normal">4) Пользователь может выбрать количество однотипных звёзд (<link displaytype="text" defaultstyle="true" type="topiclink" href="----">на стороне программы</link> будет посчитано поместятся ли такое количество звёзд с таким размером)</para>
+    <para styleclass="Normal"></para>
+    <para styleclass="Normal"><image src="clip0009.png" scale="157.14%" width="204" height="88" styleclass="Image Caption" figurelistinclude="0"></image></para>
+    <para styleclass="Normal"></para>
+    <para styleclass="Normal">5) После того, как пользователь выбрал все подходящие параметры, мы переходим в верхний левый угол и жмём на нарисовать звезду</para>
+    <para styleclass="Normal"></para>
+    <para styleclass="Normal"><image src="clip0010.png" scale="100.00%" styleclass="Image Caption" figurelistinclude="0"></image></para>
+    <para styleclass="Normal"></para>
+    <para styleclass="Normal">&#32;</para>
+    <para styleclass="Normal"><link displaytype="text" defaultstyle="true" type="topiclink" href="-2d-2">(Подробнее читай в части сторона бекенда)</link></para>
+    <para styleclass="Normal"></para>
+    <para styleclass="Normal">6) Звезда будет отображена</para>
+    <para styleclass="Normal"></para>
+    <para styleclass="Normal"><image src="clip0011.png" scale="100.00%" styleclass="Image Caption" figurelistinclude="0"></image></para>
+    <para styleclass="Normal"></para>
+    <para styleclass="Normal">7) Чтобы изменить свой выбор, переходим в левый верхний угол и жмём на &quot;Сменить звезду&quot;</para>
+    <para styleclass="Normal"></para>
+    <para styleclass="Normal"><image src="clip0012.png" scale="100.00%" styleclass="Image Caption" figurelistinclude="0"></image></para>
+    <para styleclass="Normal"></para>
+    <para styleclass="Normal">8) Настраиваем желаемое отображение снова</para>
+    <para styleclass="Normal"></para>
+    <para styleclass="Normal"><image src="clip0013.png" scale="100.00%" styleclass="Image Caption" figurelistinclude="0"></image></para>
+    <para styleclass="Normal"></para>
+    <para styleclass="Normal">9) Жмём &quot;Нарисовать звезду&quot;</para>
+    <para styleclass="Normal"></para>
+    <para styleclass="Normal"><image src="clip0010.png" scale="100.00%" styleclass="Image Caption" figurelistinclude="0"></image></para>
+    <para styleclass="Normal"></para>
+    <para styleclass="Normal">10) Результат не заставит ждать</para>
+    <para styleclass="Normal"><image src="clip0014.png" scale="100.00%" styleclass="Image Caption" figurelistinclude="0"></image></para>
+    <para styleclass="Normal"></para>
+    <para styleclass="Normal">11) Последний результат отоброжения 2d звёзд заносится в Word. Чтобы открыть нужно нажать &quot;Открыть в word&quot;</para>
+    <para styleclass="Normal"></para>
+    <para styleclass="Normal"><image src="clip0021.png" scale="100.00%" styleclass="Image Caption" figurelistinclude="0"></image></para>
+    <para styleclass="Normal"></para>
+    <para styleclass="Normal"></para>
+    <para styleclass="Normal"><image src="clip0020.png" scale="30.74%" width="590" height="332" styleclass="Image Caption" figurelistinclude="0"></image></para>
+    <para styleclass="Normal"><tab /></para>
+  </body>
+</topic>

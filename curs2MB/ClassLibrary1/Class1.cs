@@ -19,10 +19,13 @@ namespace ClassLibrary1
             ;
         }
 
-        public void show(float take)
+        public void show(object takeString)
         {
+            string[] t = takeString.ToString().Split('|');
+            float take = float.Parse(t[0]);
             float max = 500;            //масштабирование
             float res = take / max;
+            float takeDirect = float.Parse(t[1]);
 
             // create an OpenGL window
             Glut.glutInit();
@@ -44,7 +47,7 @@ namespace ClassLibrary1
             // set the view and projection matrix, which are static throughout this tutorial
             program.Use();
             program["projection_matrix"].SetValue(Matrix4.CreatePerspectiveFieldOfView(0.7f/res, (float)width / height, 0.1f, 1000f));
-            program["view_matrix"].SetValue(Matrix4.LookAt(new Vector3(0, 0, 10), Vector3.Zero, new Vector3(0, 1, 0)));
+            program["view_matrix"].SetValue(Matrix4.LookAt(new Vector3(0, 0, 10), Vector3.Zero, new Vector3(takeDirect, 1, 0)));
             double Ang36 = Math.PI / 5.0; // 36° x PI/180
             double Ang72 = 2.0 * Ang36; // 72° x PI/180 в лайфхакере так
             float Sin36 = (float)Math.Sin(Ang36);

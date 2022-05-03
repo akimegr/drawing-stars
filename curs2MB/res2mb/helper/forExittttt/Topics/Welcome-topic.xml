@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../helpproject.xsl" ?>
+<topic template="Default" modified="2022-05-03T16:58:01.693+03:00" lasteditedby="akime" version="2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../helpproject.xsd">
+  <title>Добро пожаловать</title>
+  <body>
+    <header>
+      <para styleclass="Heading1">Добро пожаловать</para>
+    </header>
+    <para styleclass="Normal">Вас приветствует компания Draw Inc.</para>
+    <para styleclass="Normal"></para>
+    <para styleclass="Normal">Мы представляем огромный спектр услуг для рисования различных фигур как в<link displaytype="text" defaultstyle="true" type="topiclink" href="-2d-"> 2d</link>, так и в<link displaytype="text" defaultstyle="true" type="topiclink" href="--3d"> 3d.</link></para>
+    <para styleclass="Normal"></para>
+    <para styleclass="Normal">Данная программа поможет Вам нарисовать огромное количство различных звёзд разынх размеров и видов в режиме <link displaytype="text" defaultstyle="true" type="topiclink" href="-2d-">2d</link>. Также предоставлен функционал отображения Сириуса в <link displaytype="text" defaultstyle="true" type="topiclink" href="--3d">3d</link>.</para>
+    <para styleclass="Normal"></para>
+    <para styleclass="Normal">Программа было создана для Астрономического факультета (БНТУ).</para>
+  </body>
+</topic>

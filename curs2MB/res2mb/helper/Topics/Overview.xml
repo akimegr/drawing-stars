@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../helpproject.xsl" ?>
+<topic template="Default" modified="2022-05-03T15:37:22.805+03:00" lasteditedby="akime" version="2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../helpproject.xsd">
+  <title>Звезда с заливкой и обводкой</title>
+  <body>
+    <header>
+      <para styleclass="Heading1">Звезда с заливкой и обводкой</para>
+    </header>
+    <para styleclass="Normal">В программе присутвует пятиконечная звезда с обводкой и заливкой</para>
+    <para styleclass="Normal"><image src="clip0001.png" scale="100.00%" styleclass="Image Caption" figurelistinclude="0"></image></para>
+  </body>
+</topic>

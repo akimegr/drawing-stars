@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../helpproject.xsl" ?>
+<topic template="Default" modified="2022-05-03T16:56:40.086+03:00" lasteditedby="akime" version="2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../helpproject.xsd">
+  <title>О создателе хелпа</title>
+  <body>
+    <header>
+      <para styleclass="Heading1">О создателе хелпа</para>
+    </header>
+    <para styleclass="Normal">Хелп и программу разработал Акимов Егор студент группы 10701320.</para>
+    <para styleclass="Normal"></para>
+    <para styleclass="Normal">Контакт для связи akim.egor2013@mail.ru</para>
+  </body>
+</topic>
