@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="../helpproject.xsl" ?>
-<topic template="Default" modified="2022-05-03T16:54:43.840+03:00" lasteditedby="akime" version="2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../helpproject.xsd">
+<topic template="Default" modified="2022-05-03T17:44:09.340+03:00" lasteditedby="akime" version="2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../helpproject.xsd">
   <title>backend 2d звёзд</title>
   <body>
     <header>
@@ -42,5 +42,15 @@
     <para styleclass="Normal"></para>
     <para styleclass="Normal"><tab /><text styleclass="" style="font-family:Consolas; font-size:9pt; color:#000000;">5.2) Если не нужно:</text></para>
     <para styleclass="Normal"><tab /><tab /><text styleclass="" style="font-family:Consolas; font-size:9pt; color:#000000;">Смещаем звезду вправо: widthDraw += (</text><text styleclass="" style="font-family:Consolas; font-size:9pt; color:#0000ff;">float</text><text styleclass="" style="font-family:Consolas; font-size:9pt; color:#000000;">)(2 * radius + 0.05*radius);</text></para>
+    <para styleclass="Normal"></para>
+    <para styleclass="Normal"></para>
+    <para styleclass="Normal"></para>
+    <para styleclass="Normal"></para>
+    <para styleclass="Normal"></para>
+    <para styleclass="Normal"></para>
+    <para styleclass="Normal"></para>
+    <para styleclass="Normal"></para>
+    <para styleclass="Normal"></para>
+    <para styleclass="Normal"><link displaytype="text" defaultstyle="true" type="topiclink" href="Second-topic">В главное меню</link></para>
   </body>
 </topic>

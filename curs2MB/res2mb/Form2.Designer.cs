@@ -57,13 +57,18 @@ namespace res2mb
             this.button8 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.toolStripSplitButton3 = new System.Windows.Forms.ToolStripSplitButton();
+            this.aboutToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.helperToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripSplitButton2 = new System.Windows.Forms.ToolStripSplitButton();
             this.drawToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.wordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSplitButton3 = new System.Windows.Forms.ToolStripSplitButton();
-            this.aboutToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.helperToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripSplitButton1 = new System.Windows.Forms.ToolStripSplitButton();
+            this.startItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pauseItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.stopItem = new System.Windows.Forms.ToolStripMenuItem();
             this.typeStars.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
@@ -238,12 +243,13 @@ namespace res2mb
             this.button1.BackColor = System.Drawing.Color.DeepPink;
             this.button1.Font = new System.Drawing.Font("Impact", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button1.Location = new System.Drawing.Point(549, 78);
+            this.button1.Location = new System.Drawing.Point(38, 27);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(140, 44);
             this.button1.TabIndex = 12;
             this.button1.Text = "СИРИУС";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Visible = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
@@ -264,31 +270,33 @@ namespace res2mb
             // 
             this.button3.BackColor = System.Drawing.Color.Cyan;
             this.button3.Enabled = false;
-            this.button3.Location = new System.Drawing.Point(549, 117);
+            this.button3.Location = new System.Drawing.Point(38, 66);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(70, 47);
             this.button3.TabIndex = 14;
             this.button3.Text = "pause";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Visible = false;
             this.button3.Click += new System.EventHandler(this.button3_Click_1);
             // 
             // button4
             // 
             this.button4.BackColor = System.Drawing.Color.Cyan;
             this.button4.Enabled = false;
-            this.button4.Location = new System.Drawing.Point(615, 117);
+            this.button4.Location = new System.Drawing.Point(104, 66);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(74, 47);
             this.button4.TabIndex = 15;
             this.button4.Text = "stop";
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Visible = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // le1
             // 
             this.le1.AutoSize = true;
             this.le1.BackColor = System.Drawing.Color.SlateBlue;
-            this.le1.Location = new System.Drawing.Point(23, 72);
+            this.le1.Location = new System.Drawing.Point(6, 94);
             this.le1.Name = "le1";
             this.le1.Size = new System.Drawing.Size(17, 16);
             this.le1.TabIndex = 4;
@@ -299,7 +307,7 @@ namespace res2mb
             this.r1.AutoSize = true;
             this.r1.BackColor = System.Drawing.Color.SlateBlue;
             this.r1.Checked = true;
-            this.r1.Location = new System.Drawing.Point(192, 72);
+            this.r1.Location = new System.Drawing.Point(209, 89);
             this.r1.Name = "r1";
             this.r1.Size = new System.Drawing.Size(17, 16);
             this.r1.TabIndex = 16;
@@ -310,7 +318,7 @@ namespace res2mb
             // 
             this.h1.AutoSize = true;
             this.h1.BackColor = System.Drawing.Color.SlateBlue;
-            this.h1.Location = new System.Drawing.Point(84, 28);
+            this.h1.Location = new System.Drawing.Point(107, 20);
             this.h1.Name = "h1";
             this.h1.Size = new System.Drawing.Size(17, 16);
             this.h1.TabIndex = 17;
@@ -320,7 +328,7 @@ namespace res2mb
             // 
             this.l1.AutoSize = true;
             this.l1.BackColor = System.Drawing.Color.SlateBlue;
-            this.l1.Location = new System.Drawing.Point(84, 142);
+            this.l1.Location = new System.Drawing.Point(107, 147);
             this.l1.Name = "l1";
             this.l1.Size = new System.Drawing.Size(17, 16);
             this.l1.TabIndex = 18;
@@ -337,18 +345,18 @@ namespace res2mb
             this.groupBox1.Controls.Add(this.le1);
             this.groupBox1.Controls.Add(this.button8);
             this.groupBox1.Controls.Add(this.button5);
-            this.groupBox1.Location = new System.Drawing.Point(503, 28);
+            this.groupBox1.Location = new System.Drawing.Point(503, 30);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(241, 175);
+            this.groupBox1.Size = new System.Drawing.Size(232, 173);
             this.groupBox1.TabIndex = 19;
             this.groupBox1.TabStop = false;
             // 
             // button6
             // 
             this.button6.BackColor = System.Drawing.Color.Crimson;
-            this.button6.Location = new System.Drawing.Point(0, 94);
+            this.button6.Location = new System.Drawing.Point(26, 72);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(50, 29);
+            this.button6.Size = new System.Drawing.Size(50, 51);
             this.button6.TabIndex = 21;
             this.button6.Text = "←";
             this.button6.UseVisualStyleBackColor = false;
@@ -357,9 +365,9 @@ namespace res2mb
             // button7
             // 
             this.button7.BackColor = System.Drawing.Color.Crimson;
-            this.button7.Location = new System.Drawing.Point(116, 132);
+            this.button7.Location = new System.Drawing.Point(84, 94);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(32, 47);
+            this.button7.Size = new System.Drawing.Size(55, 47);
             this.button7.TabIndex = 22;
             this.button7.Text = "↓";
             this.button7.UseVisualStyleBackColor = false;
@@ -368,9 +376,9 @@ namespace res2mb
             // button8
             // 
             this.button8.BackColor = System.Drawing.Color.Crimson;
-            this.button8.Location = new System.Drawing.Point(183, 94);
+            this.button8.Location = new System.Drawing.Point(145, 72);
             this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(58, 29);
+            this.button8.Size = new System.Drawing.Size(58, 51);
             this.button8.TabIndex = 0;
             this.button8.Text = "→";
             this.button8.UseVisualStyleBackColor = false;
@@ -379,9 +387,9 @@ namespace res2mb
             // button5
             // 
             this.button5.BackColor = System.Drawing.Color.Crimson;
-            this.button5.Location = new System.Drawing.Point(116, 9);
+            this.button5.Location = new System.Drawing.Point(84, 42);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(32, 46);
+            this.button5.Size = new System.Drawing.Size(55, 46);
             this.button5.TabIndex = 20;
             this.button5.Text = "↑";
             this.button5.UseVisualStyleBackColor = false;
@@ -393,7 +401,9 @@ namespace res2mb
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripSplitButton3,
             this.toolStripSeparator1,
-            this.toolStripSplitButton2});
+            this.toolStripSplitButton2,
+            this.toolStripSeparator2,
+            this.toolStripSplitButton1});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(1245, 27);
@@ -401,10 +411,37 @@ namespace res2mb
             this.toolStrip1.Text = "toolStrip1";
             this.toolStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.toolStrip1_ItemClicked);
             // 
+            // toolStripSplitButton3
+            // 
+            this.toolStripSplitButton3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripSplitButton3.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.aboutToolStripMenuItem1,
+            this.helperToolStripMenuItem1});
+            this.toolStripSplitButton3.Image = ((System.Drawing.Image)(resources.GetObject("toolStripSplitButton3.Image")));
+            this.toolStripSplitButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripSplitButton3.Name = "toolStripSplitButton3";
+            this.toolStripSplitButton3.Size = new System.Drawing.Size(39, 24);
+            this.toolStripSplitButton3.Text = "toolStripSplitButton3";
+            this.toolStripSplitButton3.ButtonClick += new System.EventHandler(this.toolStripSplitButton3_ButtonClick);
+            // 
+            // aboutToolStripMenuItem1
+            // 
+            this.aboutToolStripMenuItem1.Name = "aboutToolStripMenuItem1";
+            this.aboutToolStripMenuItem1.Size = new System.Drawing.Size(224, 26);
+            this.aboutToolStripMenuItem1.Text = "about";
+            this.aboutToolStripMenuItem1.Click += new System.EventHandler(this.aboutToolStripMenuItem1_Click);
+            // 
+            // helperToolStripMenuItem1
+            // 
+            this.helperToolStripMenuItem1.Name = "helperToolStripMenuItem1";
+            this.helperToolStripMenuItem1.Size = new System.Drawing.Size(224, 26);
+            this.helperToolStripMenuItem1.Text = "helper";
+            this.helperToolStripMenuItem1.Click += new System.EventHandler(this.helperToolStripMenuItem1_Click);
+            // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 27);
             // 
             // toolStripSplitButton2
             // 
@@ -433,32 +470,45 @@ namespace res2mb
             this.wordToolStripMenuItem.Text = "Открыть в word";
             this.wordToolStripMenuItem.Click += new System.EventHandler(this.wordToolStripMenuItem_Click);
             // 
-            // toolStripSplitButton3
+            // toolStripSeparator2
             // 
-            this.toolStripSplitButton3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripSplitButton3.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.aboutToolStripMenuItem1,
-            this.helperToolStripMenuItem1});
-            this.toolStripSplitButton3.Image = ((System.Drawing.Image)(resources.GetObject("toolStripSplitButton3.Image")));
-            this.toolStripSplitButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripSplitButton3.Name = "toolStripSplitButton3";
-            this.toolStripSplitButton3.Size = new System.Drawing.Size(39, 24);
-            this.toolStripSplitButton3.Text = "toolStripSplitButton3";
-            this.toolStripSplitButton3.ButtonClick += new System.EventHandler(this.toolStripSplitButton3_ButtonClick);
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 27);
             // 
-            // aboutToolStripMenuItem1
+            // toolStripSplitButton1
             // 
-            this.aboutToolStripMenuItem1.Name = "aboutToolStripMenuItem1";
-            this.aboutToolStripMenuItem1.Size = new System.Drawing.Size(224, 26);
-            this.aboutToolStripMenuItem1.Text = "about";
-            this.aboutToolStripMenuItem1.Click += new System.EventHandler(this.aboutToolStripMenuItem1_Click);
+            this.toolStripSplitButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripSplitButton1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.startItem,
+            this.pauseItem,
+            this.stopItem});
+            this.toolStripSplitButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripSplitButton1.Image")));
+            this.toolStripSplitButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripSplitButton1.Name = "toolStripSplitButton1";
+            this.toolStripSplitButton1.Size = new System.Drawing.Size(39, 24);
+            this.toolStripSplitButton1.Text = "toolStripSplitButton1";
+            this.toolStripSplitButton1.ButtonClick += new System.EventHandler(this.toolStripSplitButton1_ButtonClick);
             // 
-            // helperToolStripMenuItem1
+            // startItem
             // 
-            this.helperToolStripMenuItem1.Name = "helperToolStripMenuItem1";
-            this.helperToolStripMenuItem1.Size = new System.Drawing.Size(224, 26);
-            this.helperToolStripMenuItem1.Text = "helper";
-            this.helperToolStripMenuItem1.Click += new System.EventHandler(this.helperToolStripMenuItem1_Click);
+            this.startItem.Name = "startItem";
+            this.startItem.Size = new System.Drawing.Size(224, 26);
+            this.startItem.Text = "Сириус";
+            this.startItem.Click += new System.EventHandler(this.сириусToolStripMenuItem_Click);
+            // 
+            // pauseItem
+            // 
+            this.pauseItem.Name = "pauseItem";
+            this.pauseItem.Size = new System.Drawing.Size(224, 26);
+            this.pauseItem.Text = "Pause";
+            this.pauseItem.Click += new System.EventHandler(this.pauseToolStripMenuItem_Click);
+            // 
+            // stopItem
+            // 
+            this.stopItem.Name = "stopItem";
+            this.stopItem.Size = new System.Drawing.Size(224, 26);
+            this.stopItem.Text = "Stop";
+            this.stopItem.Click += new System.EventHandler(this.stopToolStripMenuItem_Click);
             // 
             // Form2
             // 
@@ -530,6 +580,11 @@ namespace res2mb
         private System.Windows.Forms.ToolStripSplitButton toolStripSplitButton3;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem helperToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
+        private System.Windows.Forms.ToolStripSplitButton toolStripSplitButton1;
+        private System.Windows.Forms.ToolStripMenuItem startItem;
+        private System.Windows.Forms.ToolStripMenuItem pauseItem;
+        private System.Windows.Forms.ToolStripMenuItem stopItem;
     }
 }
 

@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="../helpproject.xsl" ?>
-<topic template="Default" modified="2022-05-03T16:49:22.327+03:00" lasteditedby="akime" version="2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../helpproject.xsd">
+<topic template="Default" modified="2022-05-03T17:44:21.792+03:00" lasteditedby="akime" version="2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../helpproject.xsd">
   <title>Формула углов 2d</title>
   <body>
     <header>
@@ -18,5 +18,13 @@
     <para styleclass="Normal"><text styleclass="" style="font-family:Consolas; font-size:9pt; color:#000000;"> &#160; &#160; &#160; &#160; &#160; &#160;pnts[7].X += pnts[7].X - pnts[3].X; pnts[7].Y = pnts[3].Y; </text><text styleclass="" style="font-family:Consolas; font-size:9pt; color:#008000;">// отражаем</text></para>
     <para styleclass="Normal"><text styleclass="" style="font-family:Consolas; font-size:9pt; color:#000000;"> &#160; &#160; &#160; &#160; &#160; &#160;pnts[8].X += pnts[8].X - pnts[2].X; pnts[8].Y = pnts[2].Y; </text><text styleclass="" style="font-family:Consolas; font-size:9pt; color:#008000;">// отражаем</text></para>
     <para styleclass="Normal"><text styleclass="" style="font-family:Consolas; font-size:9pt; color:#000000;"> &#160; &#160; &#160; &#160; &#160; &#160;pnts[9].X += pnts[9].X - pnts[1].X; pnts[9].Y = pnts[1].Y; </text><text styleclass="" style="font-family:Consolas; font-size:9pt; color:#008000;">// отражаем</text></para>
+    <para styleclass="Normal"></para>
+    <para styleclass="Normal"></para>
+    <para styleclass="Normal"></para>
+    <para styleclass="Normal"></para>
+    <para styleclass="Normal"></para>
+    <para styleclass="Normal"></para>
+    <para styleclass="Normal"></para>
+    <para styleclass="Normal"><link displaytype="text" defaultstyle="true" type="topiclink" href="Second-topic">В главное меню</link></para>
   </body>
 </topic>

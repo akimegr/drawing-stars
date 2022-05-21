@@ -8,11 +8,12 @@ namespace ClassLibrary1
     {
         private static int width = 1280, height = 720;
         private static ShaderProgram program;
-        private static VBO<Vector3> pyramid;
-        private static VBO<Vector3> pyramidColor;
-        private static VBO<uint> pyramidTriangles;
+        private static VBO<Vector3> star;
+        private static VBO<Vector3> starColor;
+        private static VBO<uint> starTriangles;
         private static System.Diagnostics.Stopwatch watch;
         private static float angle;
+        static float deltaTime = 0.001f;
 
         public static void Main()
         {
@@ -26,25 +27,25 @@ namespace ClassLibrary1
             float max = 500;            //масштабирование
             float res = take / max;
             float takeDirect = float.Parse(t[1]);
+            int z = int.Parse(t[2]);
+            if (z == 1)
+            {
+                deltaTime = -deltaTime;
+            }
 
-            // create an OpenGL window
             Glut.glutInit();
             Glut.glutInitDisplayMode(Glut.GLUT_DOUBLE | Glut.GLUT_DEPTH);
             Glut.glutInitWindowSize(width, height);
-            Glut.glutCreateWindow("OpenGL Tutorial");
+            Glut.glutCreateWindow("Курсовая Егор Акимов 3d");
 
-            // provide the Glut callbacks that are necessary for running this tutorial
             Glut.glutIdleFunc(OnRenderFrame);
             Glut.glutDisplayFunc(OnDisplay);
             Glut.glutCloseFunc(OnClose);
 
-            // enable depth testing to ensure correct z-ordering of our fragments
             Gl.Enable(EnableCap.DepthTest);
 
-            // compile the shader program
             program = new ShaderProgram(VertexShader, FragmentShader);
 
-            // set the view and projection matrix, which are static throughout this tutorial
             program.Use();
             program["projection_matrix"].SetValue(Matrix4.CreatePerspectiveFieldOfView(0.7f/res, (float)width / height, 0.1f, 1000f));
             program["view_matrix"].SetValue(Matrix4.LookAt(new Vector3(0, 0, 10), Vector3.Zero, new Vector3(takeDirect, 1, 0)));
@@ -55,8 +56,7 @@ namespace ClassLibrary1
             float Cos36 = (float)Math.Cos(Ang36);
             float Cos72 = (float)Math.Cos(Ang72);
 
-            // create a pyramid with vertices and colors
-            pyramid = new VBO<Vector3>(new Vector3[] {
+            star = new VBO<Vector3>(new Vector3[] {
                 //new Vector3(0,-outerradius,0),
                 //new Vector3(innerrdius*Sin36,-innerrdius*Cos36, 0),
                 //new Vector3(outerradius*Sin72,-outerradius*Cos72,0),
@@ -94,14 +94,14 @@ namespace ClassLibrary1
 
 
                 });
-            pyramidColor = new VBO<Vector3>(new Vector3[] {
+            starColor = new VBO<Vector3>(new Vector3[] {
                 new Vector3(255, 237, 0), new Vector3(255, 237, 0), new Vector3(255, 237, 0),
                 new Vector3(255, 237, 0), new Vector3(255, 237, 0), new Vector3(255, 237, 0),
                 new Vector3(255, 237, 0), new Vector3(255, 237, 0), new Vector3(255, 237, 0),
                 new Vector3(255, 237, 0), new Vector3(255, 237, 0), new Vector3(255, 237, 0),
                 new Vector3(255, 237, 0), new Vector3(255, 237, 0), new Vector3(255, 237, 0),
                 new Vector3(255, 237, 0), new Vector3(255, 237, 0), new Vector3(255, 237, 0)});
-            pyramidTriangles = new VBO<uint>(new uint[71] { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70 }, BufferTarget.ElementArrayBuffer);
+            starTriangles = new VBO<uint>(new uint[71] { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70 }, BufferTarget.ElementArrayBuffer);
 
            
             watch = System.Diagnostics.Stopwatch.StartNew();
@@ -111,10 +111,9 @@ namespace ClassLibrary1
 
         private static void OnClose()
         {
-            // dispose of all of the resources that were created
-            pyramid.Dispose();
-            pyramidColor.Dispose();
-            pyramidTriangles.Dispose();
+            star.Dispose();
+            starColor.Dispose();
+            starTriangles.Dispose();
             program.DisposeChildren = true;
             program.Dispose();
         }
@@ -126,31 +125,24 @@ namespace ClassLibrary1
 
         private static void OnRenderFrame()
         {
-            // calculate how much time has elapsed since the last frame
             watch.Stop();
-            float deltaTime = (float)watch.ElapsedTicks / System.Diagnostics.Stopwatch.Frequency;
+            
             watch.Restart();
 
-            // use the deltaTime to adjust the angle of the cube and pyramid
             angle += deltaTime;
 
-            // set up the OpenGL viewport and clear both the color and depth bits
             Gl.Viewport(0, 0, width, height);
             Gl.Clear(ClearBufferMask.ColorBufferBit | ClearBufferMask.DepthBufferBit);
 
-            // use our shader program
             Gl.UseProgram(program);
 
-            // bind the vertex positions, colors and elements of the pyramid
             program["model_matrix"].SetValue(Matrix4.CreateRotationY(angle) * Matrix4.CreateTranslation(new Vector3(0.5f, 1.5, 0)));    //отображение выше ниже
-            Gl.BindBufferToShaderAttribute(pyramid, program, "vertexPosition");
-            Gl.BindBufferToShaderAttribute(pyramidColor, program, "vertexColor");
-            Gl.BindBuffer(pyramidTriangles);
+            Gl.BindBufferToShaderAttribute(star, program, "vertexPosition");
+            Gl.BindBufferToShaderAttribute(starColor, program, "vertexColor");
+            Gl.BindBuffer(starTriangles);
 
-            // draw the pyramid
-            Gl.DrawElements(BeginMode.Triangles, pyramidTriangles.Count, DrawElementsType.UnsignedInt, IntPtr.Zero);
+            Gl.DrawElements(BeginMode.Triangles, starTriangles.Count, DrawElementsType.UnsignedInt, IntPtr.Zero);
 
-            // bind the vertex positions, colors and elements of the cube
             program["model_matrix"].SetValue(Matrix4.CreateRotationY(angle / 2) * Matrix4.CreateRotationX(angle) * Matrix4.CreateTranslation(new Vector3(1.5f, 0, 0)));
 
 

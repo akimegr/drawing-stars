@@ -7,7 +7,7 @@
         <export-tasks>
           <export-task name="Publish as CHM" format="CHM">
             <task-config-group name="settings">
-              <task-config-value name="outputfile">NewProject.chm</task-config-value>
+              <task-config-value name="outputfile">..\MMyNewNewProject.chm</task-config-value>
               <task-config-value name="skin">$(HMSYS)Templates\HTML Skins\CHM Skin, Dark Blue Header, Feature Images.hmskin</task-config-value>
               <task-config-value name="deletetemp">1</task-config-value>
               <task-config-value name="make0include">CHM</task-config-value>
@@ -56,9 +56,9 @@
       <config-value name="versionmajor">1</config-value>
       <config-value name="versionminor">0</config-value>
       <config-value name="versionbuild">0</config-value>
-      <config-value name="lcid">ru</config-value>
-      <config-value name="charset">ANSI_CHARSET</config-value>
-      <config-value name="deffont">font-family:Tahoma; font-size:10pt; color:#000000;</config-value>
+      <config-value name="lcid" translate="true">ru</config-value>
+      <config-value name="charset" translate="true">RUSSIAN_CHARSET</config-value>
+      <config-value name="deffont">font-family:'Times New Roman'; font-size:12pt; color:#000000; </config-value>
       <config-value name="autohelpstart">0</config-value>
       <config-value name="autohelpincrement">1</config-value>
       <config-value name="autohelpanchor">0</config-value>
@@ -70,9 +70,9 @@
       <config-value name="historyfilecount">10</config-value>
       <config-value name="historykeepdeletedfiles">0</config-value>
       <config-value name="vcsmanuallycheckout">0</config-value>
-      <config-group name="bookmarks"/>
       <config-value name="make0include">CHM</config-value>
       <config-value name="make0status">*</config-value>
+      <config-value name="bidimode">0</config-value>
     </config-group>
     <config-group name="pdf">
       <config-value name="style">0</config-value>
@@ -392,7 +392,7 @@
       <config-value name="jpgquality">90</config-value>
       <config-value name="htmlpopup">3</config-value>
       <config-value name="skin">$(HMSYS)Templates\HTML Skins\CHM Skin, Dark Blue Header, Feature Images.hmskin</config-value>
-      <config-value name="outputfile">..\NewProject.chm</config-value>
+      <config-value name="outputfile">..\MMyNewNewProject.chm</config-value>
       <config-value name="deletetemp">1</config-value>
     </config-group>
     <config-group name="user">
